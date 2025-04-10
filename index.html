@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avanti Innovation Class</title>
+
     <link href="styles.css" rel="stylesheet" type="text/css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
 </head>
 
@@ -17,7 +19,8 @@
     <header>
         <div
             class="display-flex justify-content-center descount-top-bar primary-color-bg top-descount-announcement-padding center-alligment">
-            <p class="on-primary-color"><b>Ganhe <span class="descount-price">R$10,00</span> de desconto no seu primeiro pedido.</b></p>
+            <p class="on-primary-color"><b>Ganhe <span class="descount-price">R$10,00</span> de desconto no seu primeiro
+                    pedido.</b></p>
             <p class="on-primary-color"><b>Utilize o cupom </b><span class="descount-ticket"></span>DESCONTO10</p>
         </div>
 
@@ -101,8 +104,8 @@
 
     <main>
         <div class="gray-3-bg">
-            <div class="container display-flex justify-content-center">
-                <div>
+            <div class="container display-flex justify-content-space-between">
+                <div class="anouncemment-img">
                     <img class="anouncemment-img" alt="anouncemment img">
                 </div>
 
@@ -111,8 +114,14 @@
                         <p class="text-center supersale-title-super"><b>SUPER</b></p>
                         <p class="supersale-title-sale"><b>SALE</b></p>
                     </div>
-                    <p class="text-center supersale-text"><b>ITENS SELECIONADOS COM ATÉ</b></p>
-                    <p class="text-center supersale-offer"><b>50%OFF</b></p>
+
+                    <div class="display-flex justify-content-center">
+                        <p class="text-center supersale-text"><b>ITENS SELECIONADOS COM ATÉ</b></p>
+                    </div>
+
+                    <div class="display-flex justify-content-center">
+                        <p class="text-center supersale-offer"><b>50%OFF</b></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -433,7 +442,7 @@
 
     <footer>
         <div class="display-flex-column gray-4-bg">
-            <div class="small-container footer-content">
+            <div class="small-container display-flex footer-content">
                 <div class="display-flex-column footer-logos">
                     <div>
                         <img src="img/logo.png" alt="avanti logo" width="152" height="27">

@@ -16,13 +16,32 @@
 
 
 
-/* RESET */
+/* ALL STYLE */
 * {
     margin: 0;
-    padding: 0;
-    font-family: "Nunito Sans", sans-serif;
+    padding: 0px;
     font-style: normal;
 }
+
+p, h1, h2, h3, h4, h5, h6, span {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    transition: all ease-in-out 0.25s;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+a:hover {
+    color: var(--primaryColor);
+}
+
+nav ul {
+    list-style: none;
+}
+
 
 
 
@@ -52,8 +71,8 @@ header nav {
     display: none;
 }
 
-nav ul {
-    list-style: none;
+main div.anouncemment-img {
+    width: 100%;
 }
 
 main img.anouncemment-img {
@@ -63,9 +82,9 @@ main img.anouncemment-img {
 }
 
 main div.anouncemment {
-    width: 230px;
     gap: 10px;
     margin-right: 29px;
+    width: 230px;
 }
 
 main div.supersale {
@@ -76,21 +95,25 @@ main div.supersale {
 main p.supersale-title-super {
     font-size: 40px;
     margin-bottom: -15px;
+    font-family: Nunito, sans-serif;
 }
 
 main p.supersale-title-sale {
     font-size: 40px;
     font-weight: lighter;
+    font-family: Nunito, sans-serif;
 }
 
 main p.supersale-text {
     font-size: 12px;
     color: var(--primaryColor);
+    font-family: Nunito, sans-serif;
 }
 
 main p.supersale-offer {
     font-size: 32px;
     color: #005CFF;
+    font-family: Nunito, sans-serif;
 }
 
 main nav {
@@ -105,7 +128,7 @@ main nav.no-mobile {
 }
 
 main nav ul {
-    gap: 17px;
+    gap: 10px;
 }
 
 main nav ul li {
@@ -129,12 +152,12 @@ main div.banner {
     gap: 22px;
 }
 
-main div.banner h2 {
-    margin-bottom: 18px;
-}
-
 main div.banner div:last-child {
     padding: 0 24px;
+}
+
+main div.banner h2 {
+    margin-bottom: 18px;
 }
 
 main div.extended-banner h2 {
@@ -167,18 +190,9 @@ footer div.footer-menu-item {
     padding: 16px;
 }
 
-footer nav ul {
-    display: none;
-}
-
 footer div.gray-4-bg {
     padding: 40px 0;
     margin: 40px 0;
-}
-
-footer div.footer-content {
-    display: flex;
-    flex-direction: column;
 }
 
 footer div.footer-logos {
@@ -186,9 +200,17 @@ footer div.footer-logos {
     align-items: center;
 }
 
+footer div.footer-content {
+    flex-direction: column;
+}
+
+footer nav ul {
+    display: none;
+}
+
 footer div.social-media-logos {
     gap: 40px;
-    margin: 40px 0 48px
+    margin: 40px 0 48px;
 }
 
 footer hr {
@@ -209,19 +231,6 @@ footer h6 {
     padding: 0 16px;
     text-align: center;
 }
-
-
-a {
-    color: #000;
-    text-decoration: none;
-    transition: all ease-in-out 0.25s;
-}
-
-a:hover {
-    color: var(--primaryColor);
-}
-
-
 
 /* DISPLAYS */
 .display-flex {
@@ -351,18 +360,16 @@ a:hover {
 }
 
 
-/* BANNER */
-.extended-banner-vertical-gap {
-    gap: 21px;
-}
-
-.extended-banner-item-horizontal-gap {
-    gap: 14px;
-}
-
-
 
 /* LAUNCH */
+.launch-nav-internal-spacing {
+    gap: 8px;
+}
+
+.launch-nav-internal-small-spacing {
+    gap: 12px;
+}
+
 .launch-nav-input-submit {
     width: 158px;
     height: 40px;
@@ -374,16 +381,19 @@ a:hover {
     transition: all ease-in-out 0.25s;
 }
 
-.launch-nav-internal-spacing {
-    gap: 8px;
-}
-
-.launch-nav-internal-small-spacing {
-    gap: 12px;
-}
-
 .launch-nav-input-submit:hover {
     background-color: var(--secundaryColor);
+}
+
+
+
+/* BANNER */
+.extended-banner-vertical-gap {
+    gap: 21px;
+}
+
+.extended-banner-item-horizontal-gap {
+    gap: 14px;
 }
 
 
@@ -485,11 +495,13 @@ div.newletter form {
 
     main img.anouncemment-img {
         content: url(img/body/anouncemment-img.png);
+        width: 100%;
     }
 
     main div.anouncemment {
         gap: 12px;
         margin-right: 0;
+        width: 100%;
     }
     
     main div.supersale {
@@ -499,46 +511,40 @@ div.newletter form {
     
     main p.supersale-title-super {
         font-size: 100px;
-        margin-bottom: -15px;
     }
     
     main p.supersale-title-sale {
         font-size: 100px;
-        font-weight: lighter;
     }
     
     main p.supersale-text {
         font-size: 25px;
-        color: var(--primaryColor);
+        letter-spacing: 7.5px;
     }
     
     main p.supersale-offer {
         font-size: 60px;
-        color: #005CFF;
     }
 
     main nav {
-        display: flex;
-        flex-direction: column;
+        margin: 100px 0 100px;
         gap: 19px;
-        margin-top: 100px;
-        margin-bottom: 100px;
     }
 
     main nav.no-mobile {
         display: flex;
     }
 
-    main nav ul li.no-mobile {
-        display: flex;
+    main nav ul {
+        gap: 17px;
     }
 
     main nav ul li {
         padding: 6px 8px;
     }
 
-    main nav h3 {
-        margin-bottom: 4px;
+    main nav ul li.no-mobile {
+        display: flex;
     }
 
     main nav h4 {
@@ -554,6 +560,10 @@ div.newletter form {
 
     main div.banner div:last-child {
         padding: 0 0;
+    }
+
+    main div.banner h2 {
+        margin-bottom: 22px;
     }
 
     main div.extended-banner div.small-container {
@@ -580,6 +590,11 @@ div.newletter form {
         gap: 110px;
     }
 
+    footer div.footer-menu-item {
+        padding: 0px;
+        margin-bottom: 7px;
+    }
+
     footer div.gray-4-bg {
         padding: 64px 0;
     }
@@ -590,19 +605,18 @@ div.newletter form {
     }
 
     footer div.footer-content {
-        display: flex;
         flex-direction: row;
-    }
-
-    footer nav h4 {
-        margin-bottom: 11px;
-        padding: 0;
     }
 
     footer nav ul {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    footer nav h4 {
+        margin-bottom: 11px;
+        padding: 0;
     }
 
     footer hr {
@@ -614,14 +628,10 @@ div.newletter form {
         width: 545px;
     }
 
-    footer div.pay-methods {
-        width: 100%;
+    footer h6 {
+        padding: 0 51.5px;
     }
 
-    footer h6 {
-        text-align: center;
-        margin-bottom: 40px;
-    }
 
 
     /* CONTAINERS */
@@ -670,15 +680,7 @@ div.newletter form {
         background-repeat: no-repeat;
         background-position: 577.7px;
     }
-
-    .top-bar-input-text:hover {
-        border-color: #005CFF;
-    }
-
-    .top-bar-input-text:focus {
-        border-color: #005CFF;
-    }
-
+    
 
 
     /* LAUNCH NAV */
@@ -700,11 +702,6 @@ div.newletter form {
         border-radius: 8px;
         transition: all ease-in-out 0.25s;
     }
-
-    .launch-nav-input-submit:hover {
-        background-color: var(--secundaryColor);
-    }
-
 
 
 
@@ -747,12 +744,9 @@ div.newletter form {
         width: 1260px;
         background-color: var(--gray2);
         border: 0px solid var(--gray2);
-        border-radius: 8px;
     }
 
     .newletter {
-        gap: 16px;
-        align-items: center;
         margin-top: 64px;
     }
 
@@ -778,14 +772,6 @@ div.newletter form {
         background-position: 577.7px;
     }
 
-    .newletter-form-input-text:hover {
-        border: 1px solid #005CFF;
-    }
-
-    .newletter-form-input-text:focus {
-        border: 1px solid #005CFF;
-    }
-
     .newletter-form-input-submit {
         width: 128px;
         height: 48px;
@@ -797,9 +783,6 @@ div.newletter form {
         transition: all ease-in-out 0.25s;
     }
 
-    .newletter-form-input-submit:hover {
-        background-color: var(--secundaryColor);
-    }
 
 
     /* FOOTER */
