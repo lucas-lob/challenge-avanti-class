@@ -21,12 +21,12 @@
             class="display-flex justify-content-center descount-top-bar primary-color-bg top-descount-announcement-padding center-alligment">
             <p class="on-primary-color"><b>Ganhe <span class="descount-price">R$10,00</span> de desconto no seu primeiro
                     pedido.</b></p>
-            <p class="on-primary-color"><b>Utilize o cupom </b><span class="descount-ticket"></span>DESCONTO10</p>
+            <p class="on-primary-color"><b>Utilize o cupom </b><span class="descount-ticket">DESCONTO10</span></p>
         </div>
 
         <div class="desktop container">
             <div class="container display-flex justify-content-space-between top-bar-margin">
-                <div class="display-flex">
+                <div class="display-flex center-alligment">
                     <a href="index.html">
                         <img src="/img/logo.png" width="152.58px" height="27.08px"
                             title="Retornar para a página principal" alt="logo avanti">
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="display-flex top-bar-horizontal-small-gap">
-                    <div class="display-flex top-bar-horizontal-very-small-gap">
+                    <div class="profile display-flex top-bar-horizontal-very-small-gap">
                         <div class="display-flex-column justify-content-center">
                             <a href="profile.html">
                                 <img src="img/icon/person.png" width="20.57px" height="24px" alt="person icon"
@@ -44,10 +44,9 @@
                             </a>
                         </div>
 
-                        <div>
+                        <div class="display-flex-column justify-content-center">
                             <p>Olá,</p>
-                            <p>Nome cliente!
-                            <p>
+                            <p>Nome cliente!<p>
                         </div>
                     </div>
 
@@ -61,12 +60,12 @@
             </div>
 
             <nav class="container">
-                <ul class="display-flex justify-content-space-around">
+                <ul class="display-flex justify-content-space-between">
                     <li>
-                        <a>
+                        <a class="menu display-flex center-alligment">
                             <img src="img/icon/menu.png" alt="menu icon" placeholder="Ver menu" width="14px"
                                 height="10px">
-                            <span>Todas as Categorias</span>
+                            <p><b>Todas as Categorias</b></p>
                         </a>
                     </li>
                     <li><a href="#">Departamento</a></li>
@@ -128,7 +127,7 @@
 
         <nav class="container">
             <div class="display-flex justify-content-space-between">
-                <p>Lançamentos</p>
+                <p class="font20"><b>Lançamentos</b></p>
                 <a href="#">Ver mais</a>
             </div>
 
@@ -144,16 +143,16 @@
 
                             <div class="display-flex">
                                 <div>
-                                    <p>R$ 100,00</p>
-                                    <p>R$79,90</p>
+                                    <p class="font12"><s>R$ 100,00</s></p>
+                                    <p class="font16"><b>R$79,90</b></p>
                                 </div>
 
                                 <div class="display-flex-column justify-content-center">
-                                    <h4>10% OFF</h4>
+                                    <h4 class="font11"><u>10% OFF</u></h4>
                                 </div>
                             </div>
 
-                            <p>Ou em até 10x de R$ 7,90</p>
+                            <p class=font12>Ou em até <b>10x de R$ 7,90</b></p>
                         </div>
 
                         <div class="display-flex justify-content-center">
@@ -240,7 +239,6 @@
                 </li>
             </ul>
         </nav>
-
 
         <div class="small-container banner display-flex">
             <div class="display-flex center-alligment gray-1-bg banner-image-padding">
@@ -421,7 +419,8 @@
         </div>
 
         <div class="display-flex-column newletter">
-            <p class="display-flex justify-content-center">Cadastre-se na nossa newsletter</p>
+            <p class="display-flex justify-content-center">Cadastre-se na nossa <span
+                    class="newsletter-word">newsletter</span></p>
 
             <div class="container display-flex justify-content-center newletter-bg newletter-form-padding">
                 <form class="display-flex" name="newsletter-register-form" method="post">
@@ -430,9 +429,9 @@
                     <input type="email" class="newletter-form-input-text" placeholder="Digite seu e-mail"
                         required="required">
                     <div class="display-flex-column justify-content-center">
-                        <div>
+                        <div class="display-flex">
                             <input type="checkbox" placeholder="terms-newsletter-register-form" required="required">
-                            <span>Estou de acordo com a Política de Privacidade</span>
+                            <p class="newsletter-terms">Estou de acordo com a <a href="#">Política de Privacidade<a></p>
                         </div>
                     </div>
                     <input class="newletter-form-input-submit" type="submit" value="Cadastrar">
@@ -504,10 +503,14 @@
                         </div>
                         <hr>
                         <ul>
-                            <li>Telefone: (00) 1234-5678</li>
-                            <li>E-mail: exemplo@exemplo.com.br</li>
                             <li>
-                                <p>Horário de atendimento:</p>
+                                <p><b>Telefone:</b> (00) 1234-5678</p>
+                            </li>
+                            <li>
+                                <p><b>E-mail:</b> exemplo@exemplo.com.br</p>
+                            </li>
+                            <li class="opening-hours">
+                                <p><b>Horário de atendimento:</b></p>
                                 <p>Segunda a Sábado: 07h00 às 23h00</p>
                                 <p>Domingos e Feriados: 07h00 às 21h00</p>
                             </li>
@@ -522,7 +525,8 @@
         </div>
 
         <div class="small-container display-flex-column">
-            <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+            <p class="footer-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                euismod tincidunt ut
                 laoreet
                 dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
                 suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
@@ -530,7 +534,7 @@
                 vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
                 accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
                 feugait
-                nulla facilisi.</h6>
+                nulla facilisi.</p>
 
             <div class="display-flex justify-content-center">
                 <img src="img/footer/certificates.png" alt="certificates" width="295.76" height="32">

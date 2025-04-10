@@ -11,6 +11,9 @@
     --gray2: #DEDEDE;
     --gray4: #F5F5F5;
 
+    --onBannerColor: #4F4F4F;
+    --onNewsletterFormsColor: #656565;
+
     --semiBoldWeight: 600;
 }
 
@@ -20,10 +23,10 @@
 * {
     margin: 0;
     padding: 0px;
-    font-style: normal;
 }
 
 p,
+a,
 h1,
 h2,
 h3,
@@ -32,13 +35,22 @@ h5,
 h6,
 span {
     font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+    font-size: 14px;
 }
+
+input {
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 
 a {
     color: #000;
     text-decoration: none;
     transition: all ease-in-out 0.25s;
-    font-family: "Nunito Sans", sans-serif;
 }
 
 a:hover {
@@ -239,7 +251,7 @@ footer div.pay-methods {
     width: 100%;
 }
 
-footer h6 {
+footer p.footer-text {
     margin-bottom: 40px;
     padding: 0 16px;
     text-align: center;
@@ -308,6 +320,32 @@ footer h6 {
     text-align: center;
 }
 
+
+
+/* FONTS SIZE */
+.font30 {
+    font-size: 30px;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.font18 {
+    font-size: 18px;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.font11 {
+    font-size: 11px;
+}
 
 
 /* BACKGROUNDS */
@@ -501,13 +539,27 @@ div.newletter form {
         font-size: 14px;
     }
 
+    header div.profile p {
+        font-weight: var(--semiBoldWeight);
+        line-height: 14px;
+    }
+
     header nav {
         display: block;
         margin-bottom: 18px;
     }
 
+    header nav a.menu {
+        gap: 8px;
+    }
+
     header nav ul {
         flex-wrap: wrap;
+        margin: 0 15px;
+    }
+
+    header span.descount-ticket {
+        font-style: italic;
     }
 
     main div.anouncemment {
@@ -559,6 +611,13 @@ div.newletter form {
         gap: 19px;
     }
 
+    main nav h4 {
+        background-color: var(--greenColor);
+        color: #FFF;
+        border-radius: 4px;
+        padding: 4px;
+    }
+
     main nav.no-mobile {
         display: flex;
     }
@@ -592,12 +651,33 @@ div.newletter form {
 
     main div.banner h2 {
         margin-bottom: 22px;
+        font-style: bold;
+        font-family: Nunito, sans-serif;
+        font-size: 30px;
+    }
+
+    main div.banner p {
+        font-family: Nunito, sans-serif;
+        font-size: 18px;
     }
 
     main div.extended-banner div.small-container {
         flex-direction: row;
         padding: 0px;
         gap: 0px;
+    }
+
+    main div.extended-banner h2 {
+        color: var(--onBannerColor);
+        font-style: bold;
+        font-family: Nunito, sans-serif;
+        font-size: 30px;
+    }
+
+    main div.extended-banner p {
+        font-family: Nunito, sans-serif;
+        color: var(--onBannerColor);
+        font-size: 18px;
     }
 
     main div.contact div {
@@ -607,6 +687,36 @@ div.newletter form {
     main div.contact img {
         content: url(img/body/contact-bg.png);
     }
+
+    main div.contact p {
+        font-family: Nunito, sans-serif;
+        color: var(--onPrimaryColor);
+        font-size: 30px;
+    }
+
+    main div.newletter p {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    main div.newletter span.newsletter-word {
+        font-size: 20px;
+        color: var(--primaryColor);
+    }
+
+    main div.newletter p.newsletter-terms {
+        margin-left: 8px;
+        font-size: 12px;
+        color: var(--onNewsletterFormsColor);
+    }
+
+    main div.newletter p.newsletter-terms a {
+        font-size: 12px;
+        color: var(--onNewsletterFormsColor);
+        text-decoration: underline;
+    }
+
+
 
     footer {
         margin-bottom: 24px;
@@ -651,13 +761,21 @@ div.newletter form {
         display: none;
     }
 
+    footer li.opening-hours p {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
     footer img.pay-methods {
         content: url(img/footer/pay-methods.png);
         width: 545px;
     }
 
-    footer h6 {
+    footer p.footer-text {
         padding: 0 51.5px;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 20px;
     }
 
 
@@ -746,7 +864,7 @@ div.newletter form {
     }
 
     .extended-banner-vertical-gap {
-        gap: 60px;
+        gap: 50px;
     }
 
     .extended-banner-text-width {
