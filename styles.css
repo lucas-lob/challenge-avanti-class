@@ -23,7 +23,14 @@
     font-style: normal;
 }
 
-p, h1, h2, h3, h4, h5, h6, span {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
     font-family: "Nunito Sans", sans-serif;
 }
 
@@ -71,7 +78,12 @@ header nav {
     display: none;
 }
 
+main div.anouncemment {
+    width: 100%;
+}
+
 main div.anouncemment-img {
+    position: absolute;
     width: 100%;
 }
 
@@ -79,12 +91,13 @@ main img.anouncemment-img {
     content: url(img/body/anouncemment-img-mobile.png);
     width: 225px;
     height: 306px;
+    mix-blend-mode: darken;
 }
 
-main div.anouncemment {
+main div.anouncemment-text {
+    height: 306px;
     gap: 10px;
     margin-right: 29px;
-    width: 230px;
 }
 
 main div.supersale {
@@ -264,6 +277,10 @@ footer h6 {
 
 .justify-content-space-between {
     justify-content: space-between;
+}
+
+.justify-content-right {
+    justify-content: right;
 }
 
 
@@ -493,35 +510,46 @@ div.newletter form {
         flex-wrap: wrap;
     }
 
+    main div.anouncemment {
+        margin-left: 251px;
+        width: auto;
+    }
+
+    main div.anouncemment-img {
+        position: static;
+    }
+
     main img.anouncemment-img {
         content: url(img/body/anouncemment-img.png);
         width: 100%;
+        height: auto;
     }
 
-    main div.anouncemment {
-        gap: 12px;
-        margin-right: 0;
+    main div.anouncemment-text {
         width: 100%;
+        height: auto;
+        gap: 10px;
+        margin-right: 0;
     }
-    
+
     main div.supersale {
         flex-direction: row;
         align-items: baseline;
     }
-    
+
     main p.supersale-title-super {
         font-size: 100px;
     }
-    
+
     main p.supersale-title-sale {
         font-size: 100px;
     }
-    
+
     main p.supersale-text {
         font-size: 25px;
         letter-spacing: 7.5px;
     }
-    
+
     main p.supersale-offer {
         font-size: 60px;
     }
@@ -680,7 +708,7 @@ div.newletter form {
         background-repeat: no-repeat;
         background-position: 577.7px;
     }
-    
+
 
 
     /* LAUNCH NAV */
