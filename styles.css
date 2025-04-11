@@ -167,7 +167,12 @@ main nav ul li.no-mobile {
 }
 
 main nav h4 {
-    margin-left: 14px;
+    background-color: var(--greenColor);
+    color: #FFF;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 11px;
+    margin-left: 8px;
 }
 
 main div.banner {
@@ -183,10 +188,22 @@ main div.banner div:last-child {
 
 main div.banner h2 {
     margin-bottom: 18px;
+    font-weight: bold;
+    font-family: Nunito, sans-serif;
+    font-size: 24px;
+}
+
+main div.banner p {
+    font-family: Nunito, sans-serif;
 }
 
 main div.extended-banner h2 {
     text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-family: Nunito, sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 20px;
 }
 
 main div.extended-banner div.small-container {
@@ -197,9 +214,9 @@ main div.extended-banner div.small-container {
 
 main div.extended-banner p {
     font-family: Nunito, sans-serif;
-    color: var(--onBannerColor);
-    letter-spacing: 1px;
-    font-size: 18px;
+    color: #000;
+    letter-spacing: 0.5px;
+    font-size: 12px;
     width: 276px;
 }
 
@@ -213,6 +230,35 @@ main div.contact div {
 
 main div.contact img {
     content: url(img/body/contact-bg-mobile.png);
+}
+
+main div.contact p {
+    font-family: Nunito, sans-serif;
+    color: var(--onPrimaryColor);
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+main div.newletter p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+main div.newletter span.newsletter-word {
+    font-size: 16px;
+    color: var(--primaryColor);
+}
+
+main div.newletter p.newsletter-terms {
+    margin-left: 8px;
+    font-size: 12px;
+    color: var(--onNewsletterFormsColor);
+}
+
+main div.newletter p.newsletter-terms a {
+    font-size: 12px;
+    color: var(--onNewsletterFormsColor);
+    text-decoration: underline;
 }
 
 footer {
@@ -267,6 +313,8 @@ footer p.footer-text {
     margin-bottom: 40px;
     padding: 0 16px;
     text-align: center;
+    font-size: 12px;
+    line-height: 20px;
 }
 
 /* DISPLAYS */
@@ -627,6 +675,8 @@ div.newletter form {
         color: #FFF;
         border-radius: 4px;
         padding: 4px;
+        font-size: 11px;
+        margin-left: 8px;
     }
 
     main nav.no-mobile {
@@ -645,10 +695,6 @@ div.newletter form {
         display: flex;
     }
 
-    main nav h4 {
-        margin-left: 8px;
-    }
-
     main div.banner {
         flex-direction: row;
         justify-content: space-between;
@@ -662,7 +708,7 @@ div.newletter form {
 
     main div.banner h2 {
         margin-bottom: 22px;
-        font-style: bold;
+        font-weight: bold;
         font-family: Nunito, sans-serif;
         font-size: 30px;
     }
@@ -680,7 +726,7 @@ div.newletter form {
 
     main div.extended-banner h2 {
         color: var(--onBannerColor);
-        font-style: bold;
+        font-weight: bold;
         font-family: Nunito, sans-serif;
         font-size: 30px;
     }
@@ -792,7 +838,6 @@ div.newletter form {
 
     footer p.footer-text {
         padding: 0 51.5px;
-        font-weight: normal;
         font-size: 12px;
         line-height: 20px;
     }
