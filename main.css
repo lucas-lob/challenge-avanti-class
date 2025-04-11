@@ -561,7 +561,11 @@ div.newletter form {
 
     /* TAGS */
     header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
         width: 100%;
+        background-color: #FFF;
     }
 
     header div.desktop {
