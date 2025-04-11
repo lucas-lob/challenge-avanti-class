@@ -1,0 +1,18 @@
+/* THEME COLORS */
+:root {
+    --primaryColor: #005CFF;
+    --secundaryColor: #4187ff;
+    --onPrimaryColor: #FFF;
+    --inputTextBorderColor: #DDDDDD;
+
+    --purpleColor: #6220C1;
+    --greenColor: #5EC0BE;
+
+    --gray2: #DEDEDE;
+    --gray4: #F5F5F5;
+
+    --onBannerColor: #4F4F4F;
+    --onNewsletterFormsColor: #656565;
+
+    --semiBoldWeight: 600;
+}

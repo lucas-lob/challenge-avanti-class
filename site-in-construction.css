@@ -1,0 +1,87 @@
+@import url(colors.css);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    scale: 0.55;
+}
+
+main div.bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 0;
+    background-color: var(--gray2);
+    border-radius: 50px;
+    box-shadow: 4px 4px 5px #999;
+    transition: all ease-in-out 0.25s;
+}
+
+main div.bg:hover{
+    background-color: var(--secundaryColor);
+
+}
+
+main div.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+
+}
+
+main p { 
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: var(--onBannerColor);
+    font-weight: 100;
+    transition: all ease-in-out 0.25s;
+}
+
+
+main div.bg:hover p{
+    color: #FFF;
+}
+
+@media (min-width:760px){
+    header {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        scale: 1;
+    }
+
+    main div.bg {
+        width: 60%;
+    }
+
+
+    main div.img{
+        width: 300px;
+        height: 300px;
+
+    }
+
+    main p { 
+        font-size: 30px;
+    }
+
+}
