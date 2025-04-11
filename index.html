@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avanti Innovation Class</title>
 
-    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/index.css" rel="stylesheet" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
             <div class="container display-flex justify-content-space-between top-bar-margin">
                 <div class="display-flex center-alligment">
                     <a href="index.html">
-                        <img src="/img/logo.png" width="152.58px" height="27.08px"
+                        <img src="/assets/images/logo.png" width="152.58px" height="27.08px"
                             title="Retornar para a página principal" alt="logo avanti">
                     </a>
 
@@ -38,9 +38,9 @@
                 <div class="display-flex top-bar-horizontal-small-gap">
                     <div class="profile display-flex top-bar-horizontal-very-small-gap">
                         <div class="display-flex center-alligment">
-                            <a class="display-flex center-alligment" href="site-in-construction.html">
-                                <img src="img/icon/person.png" width="20.57px" height="24px" alt="person icon"
-                                    title="Ver seu perfil">
+                            <a class="display-flex center-alligment" href="pages/site-in-construction.html">
+                                <img src="/assets/images/icon/person.png" width="20.57px" height="24px"
+                                    alt="person icon" title="Ver seu perfil">
                             </a>
                         </div>
 
@@ -52,9 +52,9 @@
                     </div>
 
                     <div class="display-flex-column justify-content-center">
-                        <a href="site-in-construction.html">
-                            <img src="/img/icon/shopping-car.png" width="24.74px" height="24px" alt="shopping car icon"
-                                title="Ver seu carrinho">
+                        <a href="pages/site-in-construction.html">
+                            <img src="/assets/images/icon/shopping-car.png" width="24.74px" height="24px"
+                                alt="shopping car icon" title="Ver seu carrinho">
                         </a>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                 <ul class="display-flex justify-content-space-between">
                     <li>
                         <a class="menu display-flex center-alligment">
-                            <img src="img/icon/menu.png" alt="menu icon" placeholder="Ver menu" width="14px"
+                            <img src="/assets/images/icon/menu.png" alt="menu icon" placeholder="Ver menu" width="14px"
                                 height="10px">
                             <p><b>Todas as Categorias</b></p>
                         </a>
@@ -135,9 +135,10 @@
             <ul class="display-flex">
                 <li>
                     <div class="display-flex-column launch-nav-internal-spacing">
+
                         <div class="display-flex justify-content-center">
                             <a href="site-in-construction.html">
-                                <img src="img/body/launch.png" alt="launch" title="Ver lançamento">
+                                <img src="/assets/images/body/launch.png" alt="launch" title="Ver lançamento">
                             </a>
                         </div>
 
@@ -161,13 +162,17 @@
                         <div class="display-flex justify-content-center">
                             <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
                         </div>
+
                     </div>
                 </li>
 
                 <li>
                     <div class="display-flex-column launch-nav-internal-spacing">
+
                         <div class="display-flex justify-content-center">
-                            <img src="img/body/launch.png" alt="launch">
+                            <a href="site-in-construction.html">
+                                <img src="/assets/images/body/launch.png" alt="launch" title="Ver lançamento">
+                            </a>
                         </div>
 
                         <div class="display-flex-column launch-nav-internal-small-spacing">
@@ -175,69 +180,121 @@
 
                             <div class="display-flex">
                                 <div>
-                                    <p>R$ 100,00</p>
-                                    <p>R$79,90</p>
+                                    <p class="font12"><s>R$ 100,00</s></p>
+                                    <p class="font16"><b>R$79,90</b></p>
                                 </div>
 
                                 <div class="display-flex-column justify-content-center">
-                                    <h4>10% OFF</h4>
+                                    <h4><u>10% OFF</u></h4>
                                 </div>
                             </div>
 
-                            <p>Ou em até 10x de R$ 7,90</p>
+                            <p class=font12>Ou em até <b>10x de R$ 7,90</b></p>
                         </div>
 
                         <div class="display-flex justify-content-center">
                             <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
                         </div>
+                        
                     </div>
                 </li>
 
                 <li class="no-mobile">
-                    <div>
-                        <img src="img/body/launch.png" alt="launch">
-                        <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit</p>
-                        <div class="display-flex">
-                            <div>
-                                <p>R$ 100,00</p>
-                                <p>R$79,90</p>
-                            </div>
-                            <p>10% OFF</p>
+                    <div class="display-flex-column launch-nav-internal-spacing">
+
+                        <div class="display-flex justify-content-center">
+                            <a href="site-in-construction.html">
+                                <img src="/assets/images/body/launch.png" alt="launch" title="Ver lançamento">
+                            </a>
                         </div>
-                        <p>Ou em até 10x de R$ 7,90</p>
-                        <input type="button" title="Comprar" value="Comprar">
+
+                        <div class="display-flex-column launch-nav-internal-small-spacing">
+                            <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+
+                            <div class="display-flex">
+                                <div>
+                                    <p class="font12"><s>R$ 100,00</s></p>
+                                    <p class="font16"><b>R$79,90</b></p>
+                                </div>
+
+                                <div class="display-flex-column justify-content-center">
+                                    <h4><u>10% OFF</u></h4>
+                                </div>
+                            </div>
+
+                            <p class=font12>Ou em até <b>10x de R$ 7,90</b></p>
+                        </div>
+
+                        <div class="display-flex justify-content-center">
+                            <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
+                        </div>
+                        
                     </div>
                 </li>
 
                 <li class="no-mobile">
-                    <div>
-                        <img src="img/body/launch.png" alt="launch">
-                        <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit</p>
-                        <div class="display-flex">
-                            <div>
-                                <p>R$ 100,00</p>
-                                <p>R$79,90</p>
-                            </div>
-                            <p>10% OFF</p>
+                    <div class="display-flex-column launch-nav-internal-spacing">
+
+                        <div class="display-flex justify-content-center">
+                            <a href="site-in-construction.html">
+                                <img src="/assets/images/body/launch.png" alt="launch" title="Ver lançamento">
+                            </a>
                         </div>
-                        <p>Ou em até 10x de R$ 7,90</p>
-                        <input type="button" title="Comprar" value="Comprar">
+
+                        <div class="display-flex-column launch-nav-internal-small-spacing">
+                            <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+
+                            <div class="display-flex">
+                                <div>
+                                    <p class="font12"><s>R$ 100,00</s></p>
+                                    <p class="font16"><b>R$79,90</b></p>
+                                </div>
+
+                                <div class="display-flex-column justify-content-center">
+                                    <h4><u>10% OFF</u></h4>
+                                </div>
+                            </div>
+
+                            <p class=font12>Ou em até <b>10x de R$ 7,90</b></p>
+                        </div>
+
+                        <div class="display-flex justify-content-center">
+                            <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
+                        </div>
+                        
                     </div>
                 </li>
 
                 <li class="no-mobile">
-                    <div>
-                        <img src="img/body/launch.png" alt="launch">
-                        <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit</p>
-                        <div class="display-flex">
-                            <div>
-                                <p>R$ 100,00</p>
-                                <p>R$79,90</p>
-                            </div>
-                            <p>10% OFF</p>
+                    <div class="display-flex-column launch-nav-internal-spacing">
+
+                        <div class="display-flex justify-content-center">
+                            <a href="site-in-construction.html">
+                                <img src="/assets/images/body/launch.png" alt="launch" title="Ver lançamento">
+                            </a>
                         </div>
-                        <p>Ou em até 10x de R$ 7,90</p>
-                        <input type="button" title="Comprar" value="Comprar">
+
+                        <div class="display-flex-column launch-nav-internal-small-spacing">
+                            <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+
+                            <div class="display-flex">
+                                <div>
+                                    <p class="font12"><s>R$ 100,00</s></p>
+                                    <p class="font16"><b>R$79,90</b></p>
+                                </div>
+
+                                <div class="display-flex-column justify-content-center">
+                                    <h4><u>10% OFF</u></h4>
+                                </div>
+                            </div>
+
+                            <p class=font12>Ou em até <b>10x de R$ 7,90</b></p>
+                        </div>
+
+                        <div class="display-flex justify-content-center">
+                            <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
+                        </div>
+                        
                     </div>
                 </li>
             </ul>
@@ -245,7 +302,7 @@
 
         <div class="small-container banner display-flex">
             <div class="display-flex center-alligment gray-1-bg banner-image-padding">
-                <img src="img/body/banner1-image.png" alt="banner image">
+                <img src="/assets/images/body/banner1-image.png" alt="banner image">
             </div>
 
             <div class="display-flex-column justify-content-center banner-vertical-gap banner-text-width">
@@ -271,7 +328,7 @@
 
                     <div class="display-flex extended-banner-item-horizontal-gap">
                         <div class="display-flex center-alligment icon">
-                            <img src="img/icon/local-circle.png" alt="local icon">
+                            <img src="/assets/images/icon/local-circle.png" alt="local icon">
                         </div>
                         <p>
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
@@ -282,7 +339,7 @@
 
                     <div class="display-flex extended-banner-item-horizontal-gap">
                         <div class="display-flex center-alligment icon">
-                            <img src="img/icon/local-circle.png" alt="local icon">
+                            <img src="/assets/images/icon/local-circle.png" alt="local icon">
                         </div>
                         <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                             ridiculus
@@ -291,7 +348,7 @@
 
                     <div class="display-flex extended-banner-item-horizontal-gap">
                         <div class="display-flex center-alligment icon">
-                            <img src="img/icon/local-circle.png" alt="local icon">
+                            <img src="/assets/images/icon/local-circle.png" alt="local icon">
                         </div>
                         <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                             ridiculus
@@ -300,14 +357,14 @@
                 </div>
 
                 <div>
-                    <img src="img/body/banner2-image.png" alt="banner image">
+                    <img src="/assets/images/body/banner2-image.png" alt="banner image">
                 </div>
             </div>
         </div>
 
         <div class="small-container banner display-flex justify-content-space-between">
             <div class="display-flex center-alligment gray-1-bg banner-image-padding">
-                <img src="img/body/banner1-image.png" alt="banner image">
+                <img src="/assets/images/body/banner1-image.png" alt="banner image">
             </div>
 
             <div class="display-flex-column justify-content-center banner-vertical-gap banner-text-width">
@@ -326,90 +383,174 @@
         </div>
 
         <nav class="no-mobile container">
-            <div class="display-flex">
-                <span>Lançamentos</span>
-                <a href="#">Ver mais</a>
+            <div class="display-flex justify-content-space-between">
+                <p class="font20"><b>Lançamentos</b></p>
+                <a href="site-in-construction.html">Ver mais</a>
             </div>
 
             <ul class="display-flex">
                 <li>
-                    <div>
-                        <img src="img/body/launch.png" alt="launch">
-                        <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit</p>
-                        <div class="display-flex">
-                            <div>
-                                <p>R$ 100,00</p>
-                                <p>R$79,90</p>
-                            </div>
-                            <p>10% OFF</p>
-                        </div>
-                        <p>Ou em até 10x de R$ 7,90</p>
-                        <input type="button" title="Comprar" value="Comprar">
-                    </div>
+                    <div class="display-flex-column launch-nav-internal-spacing">
 
-                </li>
-
-                <li>
-                    <div>
-                        <img src="img/body/launch.png" alt="launch">
-                        <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit</p>
-                        <div class="display-flex">
-                            <div>
-                                <p>R$ 100,00</p>
-                                <p>R$79,90</p>
-                            </div>
-                            <p>10% OFF</p>
+                        <div class="display-flex justify-content-center">
+                            <a href="site-in-construction.html">
+                                <img src="/assets/images/body/launch.png" alt="launch" title="Ver lançamento">
+                            </a>
                         </div>
-                        <p>Ou em até 10x de R$ 7,90</p>
-                        <input type="button" title="Comprar" value="Comprar">
-                    </div>
-                </li>
 
-                <li>
-                    <div>
-                        <img src="img/body/launch.png" alt="launch">
-                        <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit</p>
-                        <div class="display-flex">
-                            <div>
-                                <p>R$ 100,00</p>
-                                <p>R$79,90</p>
+                        <div class="display-flex-column launch-nav-internal-small-spacing">
+                            <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+
+                            <div class="display-flex">
+                                <div>
+                                    <p class="font12"><s>R$ 100,00</s></p>
+                                    <p class="font16"><b>R$79,90</b></p>
+                                </div>
+
+                                <div class="display-flex-column justify-content-center">
+                                    <h4><u>10% OFF</u></h4>
+                                </div>
                             </div>
-                            <p>10% OFF</p>
+
+                            <p class=font12>Ou em até <b>10x de R$ 7,90</b></p>
                         </div>
-                        <p>Ou em até 10x de R$ 7,90</p>
-                        <input type="button" title="Comprar" value="Comprar">
+
+                        <div class="display-flex justify-content-center">
+                            <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
+                        </div>
+
                     </div>
                 </li>
 
                 <li>
-                    <div>
-                        <img src="img/body/launch.png" alt="launch">
-                        <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit</p>
-                        <div class="display-flex">
-                            <div>
-                                <p>R$ 100,00</p>
-                                <p>R$79,90</p>
-                            </div>
-                            <p>10% OFF</p>
+                    <div class="display-flex-column launch-nav-internal-spacing">
+
+                        <div class="display-flex justify-content-center">
+                            <a href="site-in-construction.html">
+                                <img src="/assets/images/body/launch.png" alt="launch" title="Ver lançamento">
+                            </a>
                         </div>
-                        <p>Ou em até 10x de R$ 7,90</p>
-                        <input type="button" title="Comprar" value="Comprar">
+
+                        <div class="display-flex-column launch-nav-internal-small-spacing">
+                            <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+
+                            <div class="display-flex">
+                                <div>
+                                    <p class="font12"><s>R$ 100,00</s></p>
+                                    <p class="font16"><b>R$79,90</b></p>
+                                </div>
+
+                                <div class="display-flex-column justify-content-center">
+                                    <h4><u>10% OFF</u></h4>
+                                </div>
+                            </div>
+
+                            <p class=font12>Ou em até <b>10x de R$ 7,90</b></p>
+                        </div>
+
+                        <div class="display-flex justify-content-center">
+                            <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
+                        </div>
+                        
                     </div>
                 </li>
 
-                <li>
-                    <div>
-                        <img src="img/body/launch.png" alt="launch">
-                        <p>Lorem ipsum dolor sit amet consectetuer adipiscing elit</p>
-                        <div class="display-flex">
-                            <div>
-                                <p>R$ 100,00</p>
-                                <p>R$79,90</p>
-                            </div>
-                            <p>10% OFF</p>
+                <li class="no-mobile">
+                    <div class="display-flex-column launch-nav-internal-spacing">
+
+                        <div class="display-flex justify-content-center">
+                            <a href="site-in-construction.html">
+                                <img src="/assets/images/body/launch.png" alt="launch" title="Ver lançamento">
+                            </a>
                         </div>
-                        <p>Ou em até 10x de R$ 7,90</p>
-                        <input type="button" title="Comprar" value="Comprar">
+
+                        <div class="display-flex-column launch-nav-internal-small-spacing">
+                            <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+
+                            <div class="display-flex">
+                                <div>
+                                    <p class="font12"><s>R$ 100,00</s></p>
+                                    <p class="font16"><b>R$79,90</b></p>
+                                </div>
+
+                                <div class="display-flex-column justify-content-center">
+                                    <h4><u>10% OFF</u></h4>
+                                </div>
+                            </div>
+
+                            <p class=font12>Ou em até <b>10x de R$ 7,90</b></p>
+                        </div>
+
+                        <div class="display-flex justify-content-center">
+                            <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
+                        </div>
+                        
+                    </div>
+                </li>
+
+                <li class="no-mobile">
+                    <div class="display-flex-column launch-nav-internal-spacing">
+
+                        <div class="display-flex justify-content-center">
+                            <a href="site-in-construction.html">
+                                <img src="/assets/images/body/launch.png" alt="launch" title="Ver lançamento">
+                            </a>
+                        </div>
+
+                        <div class="display-flex-column launch-nav-internal-small-spacing">
+                            <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+
+                            <div class="display-flex">
+                                <div>
+                                    <p class="font12"><s>R$ 100,00</s></p>
+                                    <p class="font16"><b>R$79,90</b></p>
+                                </div>
+
+                                <div class="display-flex-column justify-content-center">
+                                    <h4><u>10% OFF</u></h4>
+                                </div>
+                            </div>
+
+                            <p class=font12>Ou em até <b>10x de R$ 7,90</b></p>
+                        </div>
+
+                        <div class="display-flex justify-content-center">
+                            <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
+                        </div>
+                        
+                    </div>
+                </li>
+
+                <li class="no-mobile">
+                    <div class="display-flex-column launch-nav-internal-spacing">
+
+                        <div class="display-flex justify-content-center">
+                            <a href="site-in-construction.html">
+                                <img src="/assets/images/body/launch.png" alt="launch" title="Ver lançamento">
+                            </a>
+                        </div>
+
+                        <div class="display-flex-column launch-nav-internal-small-spacing">
+                            <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+
+                            <div class="display-flex">
+                                <div>
+                                    <p class="font12"><s>R$ 100,00</s></p>
+                                    <p class="font16"><b>R$79,90</b></p>
+                                </div>
+
+                                <div class="display-flex-column justify-content-center">
+                                    <h4><u>10% OFF</u></h4>
+                                </div>
+                            </div>
+
+                            <p class=font12>Ou em até <b>10x de R$ 7,90</b></p>
+                        </div>
+
+                        <div class="display-flex justify-content-center">
+                            <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
+                        </div>
+                        
                     </div>
                 </li>
             </ul>
@@ -417,6 +558,7 @@
 
         <div class="contact position-relative">
             <img alt="contact bg image">
+
             <div class="display-flex justify-content-center center-text-image center-alligment primary-color-bg">
                 <p class="on-primary-color text-center">Entre em contato conosco e
                     verifique a disponibilidade para sua região!
@@ -432,15 +574,20 @@
                 <form class="display-flex" name="newsletter-register-form" method="post">
                     <input class="newletter-form-input-text" type="text" placeholder="Digite seu nome"
                         required="required">
+
                     <input type="email" class="newletter-form-input-text" placeholder="Digite seu e-mail"
                         required="required">
+
                     <div class="display-flex-column justify-content-center">
                         <div class="display-flex justify-content-center">
                             <input type="checkbox" placeholder="terms-newsletter-register-form" required="required">
-                            <p class="newsletter-terms">Estou de acordo com a <a href="site-in-construction.html" title="Ver a Política de Privacidade">Política de Privacidade</a>
+                            
+                            <p class="newsletter-terms">Estou de acordo com a <a href="pages/site-in-construction.html"
+                                    title="Ver a Política de Privacidade">Política de Privacidade</a>
                             </p>
                         </div>
                     </div>
+
                     <input class="newletter-form-input-submit" type="submit" value="Cadastrar" title="Cadastrar">
                 </form>
             </div>
@@ -452,24 +599,30 @@
             <div class="small-container display-flex footer-content">
                 <div class="display-flex-column footer-logos">
                     <div class="display-flex">
-                        <img src="img/logo.png" alt="avanti logo" width="152" height="27">
+                        <img src="/assets/images/logo.png" alt="avanti logo" width="152" height="27">
                     </div>
 
                     <div class="display-flex social-media-logos">
-                        <a class="display-flex center-alligment" href="https://www.instagram.com/penseavanti/" target="_blank">
-                            <img src="img/icon/instagram.png" alt="instagram icon" width="19" height="19" title="Ver Instagram da Avanti">
+                        <a class="display-flex center-alligment" href="https://www.instagram.com/penseavanti/"
+                            target="_blank" rel="noopener">
+                            <img src="/assets/images/icon/instagram.png" alt="instagram icon" width="19" height="19"
+                                title="Ver Instagram da Avanti">
                         </a>
 
                         <a class="display-flex center-alligment" href="site-in-construction.html" target="_blank">
-                            <img src="img/icon/facebook.png" alt="facebook icon" width="10" height="22" title="Ver Facebook da Avanti">
+                            <img src="/assets/images/icon/facebook.png" alt="facebook icon" width="10" height="22"
+                                title="Ver Facebook da Avanti">
                         </a>
 
-                        <a class="display-flex center-alligment" href="https://www.youtube.com/@BuildingAvanti" target="_blank">
-                            <img src="img/icon/youtube.png" alt="youtube icon" width="26" height="26" title="Ver Youtube da Avanti">
+                        <a class="display-flex center-alligment" href="https://www.youtube.com/@BuildingAvanti"
+                            target="_blank" rel="noopener">
+                            <img src="/assets/images/icon/youtube.png" alt="youtube icon" width="26" height="26"
+                                title="Ver Youtube da Avanti">
                         </a>
 
                         <a class="display-flex center-alligment" href="site-in-construction.html" target="_blank">
-                            <img src="img/icon/tiktok.png" alt="tiktok icon" width="18" height="21" title="Ver TikTok da Avanti">
+                            <img src="/assets/images/icon/tiktok.png" alt="tiktok icon" width="18" height="21"
+                                title="Ver TikTok da Avanti">
                         </a>
                     </div>
                 </div>
@@ -479,14 +632,14 @@
                         <hr>
                         <div class="footer-menu-item display-flex justify-content-space-between center-alligment">
                             <h4>Institucional</h4>
-                            <img src="img/icon/arrow-down.png" alt="arrow down icon" width="12" height="8">
+                            <img src="/assets/images/icon/arrow-down.png" alt="arrow down icon" width="12" height="8">
                         </div>
 
                         <ul>
-                            <li><a href="site-in-construction.html">Sobre nós</a></li>
-                            <li><a href="site-in-construction.html">Nossas Lojas</a></li>
-                            <li><a href="site-in-construction.html">Privacidade e Segurança</a></li>
-                            <li><a href="site-in-construction.html">Termos e Condições</a></li>
+                            <li><a href="pages/site-in-construction.html">Sobre nós</a></li>
+                            <li><a href="pages/site-in-construction.html">Nossas Lojas</a></li>
+                            <li><a href="pages/site-in-construction.html">Privacidade e Segurança</a></li>
+                            <li><a href="pages/site-in-construction.html">Termos e Condições</a></li>
                         </ul>
                     </div>
 
@@ -494,14 +647,14 @@
                         <hr>
                         <div class="footer-menu-item display-flex justify-content-space-between center-alligment">
                             <h4>Central de ajuda</h4>
-                            <img src="img/icon/arrow-down.png" alt="arrow down icon" width="12" height="8">
+                            <img src="/assets/images/icon/arrow-down.png" alt="arrow down icon" width="12" height="8">
                         </div>
                         <ul>
-                            <li><a href="site-in-construction.html">Fale Conosco</a></li>
-                            <li><a href="site-in-construction.html">Frete e Entrega</a></li>
-                            <li><a href="site-in-construction.html">Trocas e Devoluções</a></li>
-                            <li><a href="site-in-construction.html#">Formas de Pagamento</a></li>
-                            <li><a href="site-in-construction.html">FAQ</a></li>
+                            <li><a href="pages/site-in-construction.html">Fale Conosco</a></li>
+                            <li><a href="pages/site-in-construction.html">Frete e Entrega</a></li>
+                            <li><a href="pages/site-in-construction.html">Trocas e Devoluções</a></li>
+                            <li><a href="pages/site-in-construction.html#">Formas de Pagamento</a></li>
+                            <li><a href="pages/site-in-construction.html">FAQ</a></li>
                         </ul>
                     </div>
 
@@ -509,7 +662,7 @@
                         <hr>
                         <div class="footer-menu-item display-flex justify-content-space-between center-alligment">
                             <h4>Atendimento</h4>
-                            <img src="img/icon/arrow-down.png" alt="arrow down icon" width="12" height="8">
+                            <img src="/assets/images/icon/arrow-down.png" alt="arrow down icon" width="12" height="8">
                         </div>
                         <hr>
                         <ul>
@@ -547,7 +700,7 @@
                 nulla facilisi.</p>
 
             <div class="display-flex justify-content-center">
-                <img src="img/footer/certificates.png" alt="certificates" width="295.76" height="32">
+                <img src="/assets/images/footer/certificates.png" alt="certificates" width="295.76" height="32">
             </div>
         </div>
     </footer>

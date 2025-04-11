@@ -81,7 +81,7 @@ main div.anouncemment-img {
 }
 
 main img.anouncemment-img {
-    content: url(img/body/anouncemment-img-mobile.png);
+    content: url(../images/body/anouncemment-img-mobile.png);
     width: 225px;
     height: 306px;
     mix-blend-mode: darken;
@@ -210,7 +210,7 @@ main div.contact div {
 }
 
 main div.contact img {
-    content: url(img/body/contact-bg-mobile.png);
+    content: url(../images/body/contact-bg-mobile.png);
 }
 
 main div.contact p {
@@ -282,7 +282,7 @@ footer hr {
 }
 
 footer img.pay-methods {
-    content: url(img/footer/pay-methods-mobile.png);
+    content: url(../images/footer/pay-methods-mobile.png);
     width: 288px;
 }
 
@@ -437,7 +437,7 @@ footer p.footer-text {
     padding-left: 19px;
     transition: all ease-in-out 0.25s;
     outline: none;
-    background-image: url(img/icon/search.png);
+    background-image: url(../images/icon/search.png);
     background-repeat: no-repeat;
     background-position: 344.7px;
 }
@@ -525,7 +525,7 @@ div.newletter form {
     padding-left: 24px;
     transition: all ease-in-out 0.25s;
     outline: none;
-    background-image: url(img/icon/search.png);
+    background-image: url(../images/icon/search.png);
     background-repeat: no-repeat;
     background-position: 577.7px;
 }
@@ -616,7 +616,7 @@ div.newletter form {
     }
 
     main img.anouncemment-img {
-        content: url(img/body/anouncemment-img.png);
+        content: url(../images/body/anouncemment-img.png);
         width: 100%;
         height: auto;
     }
@@ -733,7 +733,7 @@ div.newletter form {
     }
 
     main div.contact img {
-        content: url(img/body/contact-bg.png);
+        content: url(../images/body/contact-bg.png);
     }
 
     main div.contact p {
@@ -817,7 +817,7 @@ div.newletter form {
     }
 
     footer img.pay-methods {
-        content: url(img/footer/pay-methods.png);
+        content: url(../images/footer/pay-methods.png);
         width: 545px;
     }
 
@@ -871,7 +871,7 @@ div.newletter form {
         margin-left: 66px;
         transition: all ease-in-out 0.25s;
         outline: none;
-        background-image: url(img/icon/search.png);
+        background-image: url(../images/icon/search.png);
         background-repeat: no-repeat;
         background-position: 577.7px;
     }
@@ -962,7 +962,7 @@ div.newletter form {
         padding-left: 24px;
         transition: all ease-in-out 0.25s;
         outline: none;
-        background-image: url(img/icon/search.png);
+        background-image: url(../images/icon/search.png);
         background-repeat: no-repeat;
         background-position: 577.7px;
     }
