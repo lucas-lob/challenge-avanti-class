@@ -26,13 +26,13 @@
 }
 
 p,
-a,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
+a,
 span {
     font-family: "Nunito Sans", sans-serif;
     font-style: normal;
@@ -193,6 +193,18 @@ main div.extended-banner div.small-container {
     flex-direction: column-reverse;
     padding: 28px 22px;
     gap: 21px;
+}
+
+main div.extended-banner p {
+    font-family: Nunito, sans-serif;
+    color: var(--onBannerColor);
+    letter-spacing: 1px;
+    font-size: 18px;
+    width: 276px;
+}
+
+main div.extended-banner div.icon {
+    width: 60px;
 }
 
 main div.contact div {
@@ -532,7 +544,7 @@ div.newletter form {
         display: none;
     }
 
-    header div:first-child {
+    header div.descount-top-bar {
         flex-direction: row;
         gap: 4px;
         padding: 4px 0px;
@@ -555,7 +567,6 @@ div.newletter form {
 
     header nav ul {
         flex-wrap: wrap;
-        margin: 0 15px;
     }
 
     header span.descount-ticket {
@@ -677,7 +688,13 @@ div.newletter form {
     main div.extended-banner p {
         font-family: Nunito, sans-serif;
         color: var(--onBannerColor);
+        letter-spacing: 1px;
         font-size: 18px;
+        width: 360px;
+    }
+
+    main div.extended-banner div.icon {
+        width: auto;
     }
 
     main div.contact div {
@@ -716,8 +733,6 @@ div.newletter form {
         text-decoration: underline;
     }
 
-
-
     footer {
         margin-bottom: 24px;
     }
@@ -755,6 +770,10 @@ div.newletter form {
     footer nav h4 {
         margin-bottom: 11px;
         padding: 0;
+    }
+
+    footer nav img {
+        display: none;
     }
 
     footer hr {
