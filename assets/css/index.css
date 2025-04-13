@@ -14,9 +14,11 @@ h4,
 h5,
 h6,
 a,
+li,
 span {
     font-family: "Nunito Sans", sans-serif;
     font-style: normal;
+    font-weight: normal;
     font-size: 14px;
 }
 
@@ -44,7 +46,6 @@ nav ul {
 
 
 
-
 /* TAGS */
 img {
     max-width: 100%;
@@ -65,10 +66,6 @@ header span.descount-price {
     background-color: var(--purpleColor);
     border-radius: 3px;
     padding: 0 5px;
-}
-
-header nav {
-    display: none;
 }
 
 main div.anouncemment {
@@ -568,9 +565,12 @@ div.newletter form {
         background-color: #FFF;
     }
 
+    header *.bg-shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
     header div.desktop {
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
 
     header div.mobile {
@@ -589,17 +589,17 @@ div.newletter form {
         line-height: 14px;
     }
 
-    header nav {
-        display: block;
-        margin-bottom: 18px;
+    header div.desktop nav li {
+        cursor: pointer;
+        transition: all ease-in-out 0.25s;
+    }
+
+    header nav ul img {
+        margin-right: 4px;
     }
 
     header nav a.menu {
         gap: 8px;
-    }
-
-    header nav ul {
-        flex-wrap: wrap;
     }
 
     header span.descount-ticket {
