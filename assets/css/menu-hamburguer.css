@@ -1,5 +1,75 @@
 @import url(colors.css);
 
+header div.hamburguer-menu {
+    display: flex;
+    background-color: #FFF;
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 329px;
+    margin: 0 16px;
+    transition: opacity ease-in-out 0.3s;
+}
+
+header div.hamburguer-menu ul {
+    gap: 12px;
+}
+
+header nav.hamburguer-menu-departments {
+    padding: 15px;
+    overflow: auto;
+    background-color: var(--gray4);
+}
+
+header nav.hamburguer-menu-departments::-webkit-scrollbar {
+    width: 30px;
+}
+
+header nav.hamburguer-menu-departments::-webkit-scrollbar-thumb {
+    border: 13px solid rgba(0, 0, 0, 0);
+    background-color: var(--hamburguerMenuScrollbarColor);
+    background-clip: padding-box;
+    border-radius: 1000px;
+}
+
+header nav.hamburguer-menu-departments::-webkit-scrollbar-corner {
+    background-color: var(--gray4);
+}
+
+header nav.hamburguer-menu-departments::-webkit-scrollbar-thumb:hover {
+    background-color: var(--hamburguerMenuScrollbarHoverColor);
+}
+
+header nav.hamburguer-menu-departments li {
+    gap: 30px;
+}
+
+header nav.hamburguer-menu-categories {
+    padding: 15px;
+    background-color: #FFF;
+    overflow: auto;
+}
+
+header nav.hamburguer-menu-categories::-webkit-scrollbar {
+    width: 30px;
+}
+
+header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb {
+    border: 13px solid rgba(0, 0, 0, 0);
+    background-color: var(--hamburguerMenuScrollbarColor);
+    background-clip: padding-box;
+    border-radius: 1000px;
+}
+
+header nav.hamburguer-menu-categories::-webkit-scrollbar-corner {
+    background-color: var(--gray4);
+}
+
+header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
+    background-color: var(--hamburguerMenuScrollbarHoverColor);
+}
+
 @media (min-width:760px) {
 
     header nav.hamburguer-menu-items li {
@@ -17,7 +87,10 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 0;
+        max-width: auto;
         max-height: 329px;
+        margin: 0;
         transition: opacity ease-in-out 0.3s;
     }
 
@@ -56,6 +129,7 @@
     }
 
     header nav.hamburguer-menu-categories {
+        padding: 0px;
         background-color: #FFF;
         width: 100%;
     }

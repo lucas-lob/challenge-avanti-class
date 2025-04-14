@@ -51,6 +51,10 @@ img {
     max-width: 100%;
 }
 
+header *.bg-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 header div.desktop {
     display: none;
 }
@@ -563,10 +567,6 @@ div.newletter form {
         z-index: 1;
         width: 100%;
         background-color: #FFF;
-    }
-
-    header *.bg-shadow {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     header div.desktop {
