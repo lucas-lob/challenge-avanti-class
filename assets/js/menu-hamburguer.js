@@ -81,7 +81,7 @@ function closeHamburguerMenu() {
 }
 
 // Global variables
-const hamburguerMenu = document.getElementById("git hamburguer-menu")
+const hamburguerMenu = document.getElementById("hamburguer-menu")
 const menuHamburguerArea = document.getElementById("hamburguer-menu-area")
 const hamburguerMenuDepartments = document.getElementById("hamburguer-menu-departments")
 const hamburguerMenuCategoriesTitle = document.getElementById("hamburguer-menu-categories-title")
