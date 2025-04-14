@@ -81,11 +81,11 @@ function closeHamburguerMenu() {
 }
 
 // Global variables
-const hamburguerMenu = document.getElementById("hamburguer-menu")
-const menuHamburguerArea = document.getElementById("hamburguer-menu-area")
-const hamburguerMenuDepartments = document.getElementById("hamburguer-menu-departments")
-const hamburguerMenuCategoriesTitle = document.getElementById("hamburguer-menu-categories-title")
-const hamburguerMenuCategories = document.getElementById("hamburguer-menu-categories")
+const hamburguerMenu = document.querySelector("header div.desktop div#hamburguer-menu")
+const menuHamburguerArea = document.querySelector("header div.desktop div#hamburguer-menu-area")
+const hamburguerMenuDepartments = document.querySelector("header div.desktop nav#hamburguer-menu-departments")
+const hamburguerMenuCategoriesTitle = document.querySelector("header div.desktop h4#hamburguer-menu-categories-title")
+const hamburguerMenuCategories = document.querySelector("header div.desktop nav#hamburguer-menu-categories")
 let timeoutCloseID = 0
 let timeoutOpenID = 0
 

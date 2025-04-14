@@ -59,6 +59,11 @@ header div.desktop {
     display: none;
 }
 
+header div nav li {
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+}
+
 header div.descount-top-bar {
     flex-direction: column;
     padding: 4px 22px;
@@ -587,11 +592,6 @@ div.newletter form {
     header div.profile p {
         font-weight: var(--semiBoldWeight);
         line-height: 14px;
-    }
-
-    header div.desktop nav li {
-        cursor: pointer;
-        transition: all ease-in-out 0.25s;
     }
 
     header nav ul img {
