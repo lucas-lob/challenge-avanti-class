@@ -1,6 +1,6 @@
 function resetMenuHamburguerStyles(isExpandedHamburguerMenu) {
 
-    if(isExpandedHamburguerMenu == false){
+    if (isExpandedHamburguerMenu == false) {
         headerMenuItems[0].classList.remove("hover-color")
 
         for (var i = 1; i < headerMenuItems.length; i++) {
@@ -17,12 +17,19 @@ function resetMenuHamburguerStyles(isExpandedHamburguerMenu) {
 }
 
 function showExpandedHamburguerMenu(element) {
+    clearTimeout(timeoutCloseID)
+
     hamburguerMenuCategoriesTitle.style.display = "none"
-    hamburguerMenuCategories.style.opacity = "0"
 
     hamburguerMenuDepartments.style.display = "flex"
 
-    hamburguerMenu.style.opacity = "1"
+    timeoutOpenID = setTimeout(() => {
+        hamburguerMenu.style.display = "flex"
+    }, 250)
+    timeoutOpenID = setTimeout(() => {
+        hamburguerMenu.style.opacity = "1"
+    }, 260)
+
 
     resetMenuHamburguerStyles(false);
     resetMenuHamburguerStyles(true);
@@ -30,18 +37,24 @@ function showExpandedHamburguerMenu(element) {
 
     departmentsMenuItems[0].classList.add("hover-color")
     departmentsMenuItems[0].classList.add("hover-bold")
-
-    showDepartmentHamburguerMenu()
 }
 
 function showResumedHamburguerMenu(element) {
+    clearTimeout(timeoutCloseID)
+
     hamburguerMenuCategoriesTitle.style.display = "block"
     hamburguerMenuCategories.style.opacity = "1"
 
     hamburguerMenuDepartments.style.display = "none"
     hamburguerMenuDepartments.classList.remove("bg-shadow")
 
-    hamburguerMenu.style.opacity = "1"
+    timeoutOpenID = setTimeout(() => {
+        hamburguerMenu.style.display = "flex"
+    }, 250)
+    timeoutOpenID = setTimeout(() => {
+        hamburguerMenu.style.opacity = "1"
+    }, 260)
+
 
     resetMenuHamburguerStyles(false);
     element.srcElement.classList.add("hover-color")
@@ -49,22 +62,24 @@ function showResumedHamburguerMenu(element) {
 }
 
 function showDepartmentHamburguerMenu(element) {
-    hamburguerMenuCategories.style.opacity = "1"
-
-    hamburguerMenu.style.opacity = "1"
-
-    if (element !== undefined){
-        resetMenuHamburguerStyles(true);
-        element.srcElement.classList.add("hover-color")
-        element.srcElement.classList.add("hover-bold")
-    }
+    resetMenuHamburguerStyles(true);
+    element.srcElement.classList.add("hover-color")
+    element.srcElement.classList.add("hover-bold")
 
 }
 
 function closeHamburguerMenu() {
-    hamburguerMenu.style.opacity = "0"
+    clearTimeout(timeoutOpenID)
+
     resetMenuHamburguerStyles(false);
+
+    hamburguerMenu.style.opacity = "0"
+    timeoutCloseID = setTimeout(() => {
+        hamburguerMenu.style.display = "none"
+    }, 355)
+
 }
+
 
 
 // Global variables
@@ -73,6 +88,10 @@ const menuHamburguerArea = document.getElementById("hamburguer-menu-area")
 const hamburguerMenuDepartments = document.getElementById("hamburguer-menu-departments")
 const hamburguerMenuCategoriesTitle = document.getElementById("hamburguer-menu-categories-title")
 const hamburguerMenuCategories = document.getElementById("hamburguer-menu-categories")
+let timeoutCloseID = 0
+let timeoutOpenID = 0
+
+
 
 // Adds event listener for all expansive items of the hamburguer menu
 const headerMenuItems = document.querySelectorAll("header div.desktop nav#hamburguer-menu-items ul li")
