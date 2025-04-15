@@ -274,8 +274,16 @@ footer div.footer-content {
     flex-direction: column;
 }
 
+footer nav h4 {
+    font-weight: bold;
+}
+
 footer nav ul {
     display: none;
+}
+
+footer nav ul a {
+    color: var(--gray0);
 }
 
 footer div.social-media-logos {
@@ -369,7 +377,7 @@ footer p.footer-text {
 
 
 
-/* FONTS SIZE */
+/* FONTS */
 .font30 {
     font-size: 30px;
 }
@@ -392,6 +400,10 @@ footer p.footer-text {
 
 .font11 {
     font-size: 11px;
+}
+
+.grayFont {
+    color: var(--gray0);
 }
 
 
