@@ -680,6 +680,35 @@ div.newletter form {
         display: flex;
     }
 
+    main nav div.card-launch {
+        position: relative;
+    }
+
+    main nav div.icons {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 110%;
+        bottom: 50%;
+        transform: translateX(-10px);
+    }
+
+    main nav div.icons button {
+        color: var(--primaryColor);
+        background-color: #FFF;
+        border: 1px solid var(--primaryColor);
+        border-radius: 1000px;
+        font-size: 18px;
+        padding: 4px;
+        transition: all ease-in-out 0.25s;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    main nav div.icons button:hover{
+        color: #FFF;
+        background-color: var(--primaryColor);
+    }
+
     main nav ul {
         gap: 17px;
     }
