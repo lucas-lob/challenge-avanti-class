@@ -149,6 +149,10 @@ main nav div.top-slider-cards {
     padding: 12px 8px;
 }
 
+main nav div.top-slider-cards img {
+    min-width: 152px;
+}
+
 main nav ul li.no-mobile {
     display: none;
 }
@@ -485,9 +489,8 @@ footer p.footer-text {
 }
 
 .launch-nav-input-submit {
-    width: 158px;
+    width: 100%;
     height: 40px;
-    padding: 10px 50.5px;
     background-color: var(--primaryColor);
     color: #FFF;
     border: 0px solid var(--primaryColor);
@@ -929,9 +932,8 @@ div.newletter form {
     }
 
     .launch-nav-input-submit {
-        width: 222px;
+        width: 100%;
         height: 40px;
-        padding: 10px 82.5px;
         background-color: var(--primaryColor);
         color: #FFF;
         border: 0px solid var(--primaryColor);
