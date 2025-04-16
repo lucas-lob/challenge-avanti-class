@@ -5,7 +5,34 @@ const cardsInfos = [
     {
         imgSrc: "assets/images/body/launch.png",
         linkUrl: "/pages/site-in-construction.html",
-        description: "Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+        description: " 9 Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+        originalPrice: "R$ 100,00",
+        descountedPrice: "R$79,90",
+        off: "10%",
+        maxInstallments: "10x de R$ 7,90"
+    },
+    {
+        imgSrc: "assets/images/body/launch.png",
+        linkUrl: "/pages/site-in-construction.html",
+        description: " 8 Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+        originalPrice: "R$ 100,00",
+        descountedPrice: "R$79,90",
+        off: "10%",
+        maxInstallments: "10x de R$ 7,90"
+    },
+    {
+        imgSrc: "assets/images/body/launch.png",
+        linkUrl: "/pages/site-in-construction.html",
+        description: " 7 Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+        originalPrice: "R$ 100,00",
+        descountedPrice: "R$79,90",
+        off: "10%",
+        maxInstallments: "10x de R$ 7,90"
+    },
+    {
+        imgSrc: "assets/images/body/launch.png",
+        linkUrl: "/pages/site-in-construction.html",
+        description: " 6 Lorem ipsum dolor sit amet consectetuer adipiscing elit",
         originalPrice: "R$ 100,00",
         descountedPrice: "R$79,90",
         off: "10%",
@@ -23,7 +50,7 @@ const cardsInfos = [
     {
         imgSrc: "assets/images/body/launch.png",
         linkUrl: "/pages/site-in-construction.html",
-        description: "Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+        description: " 5 Lorem ipsum dolor sit amet consectetuer adipiscing elit",
         originalPrice: "R$ 100,00",
         descountedPrice: "R$79,90",
         off: "10%",
@@ -32,7 +59,7 @@ const cardsInfos = [
     {
         imgSrc: "assets/images/body/launch.png",
         linkUrl: "/pages/site-in-construction.html",
-        description: "Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+        description: " 4 Lorem ipsum dolor sit amet consectetuer adipiscing elit",
         originalPrice: "R$ 100,00",
         descountedPrice: "R$79,90",
         off: "10%",
@@ -41,7 +68,7 @@ const cardsInfos = [
     {
         imgSrc: "assets/images/body/launch.png",
         linkUrl: "/pages/site-in-construction.html",
-        description: "Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+        description: " 3 Lorem ipsum dolor sit amet consectetuer adipiscing elit",
         originalPrice: "R$ 100,00",
         descountedPrice: "R$79,90",
         off: "10%",
@@ -50,7 +77,16 @@ const cardsInfos = [
     {
         imgSrc: "assets/images/body/launch.png",
         linkUrl: "/pages/site-in-construction.html",
-        description: "Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+        description: "2 Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+        originalPrice: "R$ 100,00",
+        descountedPrice: "R$79,90",
+        off: "10%",
+        maxInstallments: "10x de R$ 7,90"
+    },
+    {
+        imgSrc: "assets/images/body/launch.png",
+        linkUrl: "/pages/site-in-construction.html",
+        description: " 1 Lorem ipsum dolor sit amet consectetuer adipiscing elit",
         originalPrice: "R$ 100,00",
         descountedPrice: "R$79,90",
         off: "10%",
