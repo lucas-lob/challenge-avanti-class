@@ -1,7 +1,7 @@
-// Object contained all launch infos
+// Array contained all launch infos
 // Atenttion: all urls are from index.html
 // Atenttion: all values must be string
-const launchInfos = [
+const cardsInfos = [
     {
         imgSrc: "assets/images/body/launch.png",
         linkUrl: "/pages/site-in-construction.html",
@@ -50,37 +50,47 @@ const launchInfos = [
 ]
 
 
-const launchCarousel = document.querySelector("main nav ul")
 
-launchCarousel.innerHTML = ""
+// Settings of the cards
+const cardsSettings = {
+    divID: "top-slider",
+    divCardsClass: "top-slider-cards",
+}
 
-launchInfos.map((launch) => {
-    launchCarousel.innerHTML +=
+
+
+// Creates the card
+const div = document.getElementById(cardsSettings.divID)
+
+div.innerHTML = ""
+
+cardsInfos.map((card) => {
+    div.innerHTML +=
         `
-                        <li>
+                        <div class=${cardsSettings.divCardsClass}>
                             <div class="display-flex-column launch-nav-internal-spacing">
         
                                 <div class="display-flex justify-content-center">
-                                    <a href="${launch.linkUrl}">
-                                        <img src="${launch.imgSrc}" alt="launch" title="Ver lançamento">
+                                    <a href="${card.linkUrl}">
+                                        <img src="${card.imgSrc}" alt="launch" title="Ver lançamento">
                                     </a>
                                 </div>
         
                                 <div class="display-flex-column launch-nav-internal-small-spacing">
-                                    <h3 class="grayFont">${launch.description}</h3>
+                                    <h3 class="grayFont">${card.description}</h3>
         
                                     <div class="display-flex">
                                         <div>
-                                            <p class="font12 grayFont"><s>${launch.originalPrice}</s></p>
-                                            <p class="font16"><b>${launch.descountedPrice}</b></p>
+                                            <p class="font12 grayFont"><s>${card.originalPrice}</s></p>
+                                            <p class="font16"><b>${card.descountedPrice}</b></p>
                                         </div>
         
                                         <div class="display-flex-column justify-content-center">
-                                            <h4>${launch.off} OFF</h4>
+                                            <h4>${card.off} OFF</h4>
                                         </div>
                                     </div>
         
-                                    <p class="font12 grayFont">Ou em até <b>${launch.maxInstallments}</b></p>
+                                    <p class="font12 grayFont">Ou em até <b>${card.maxInstallments}</b></p>
                                 </div>
         
                                 <div class="display-flex justify-content-center">
@@ -88,7 +98,7 @@ launchInfos.map((launch) => {
                                 </div>
         
                             </div>
-                        </li>
+                        </${cardsSettings.divCardsID}>
         `
 })
 

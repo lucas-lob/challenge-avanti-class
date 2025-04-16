@@ -139,11 +139,11 @@ main nav.no-mobile {
     display: none;
 }
 
-main nav ul {
+main nav div.top-slider {
     gap: 10px;
 }
 
-main nav ul li {
+main nav div.top-slider-cards {
     border: 1.5px solid #DDDDDD;
     border-radius: 10px;
     padding: 12px 8px;
