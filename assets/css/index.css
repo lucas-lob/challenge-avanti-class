@@ -140,6 +140,8 @@ main nav.no-mobile {
 }
 
 main nav div.top-slider-cards {
+    position: relative;
+    overflow: hidden;
     gap: 10px;
 }
 
@@ -147,6 +149,7 @@ main nav div.top-slider-card {
     border: 1.5px solid #DDDDDD;
     border-radius: 10px;
     padding: 12px 8px;
+    transition: all ease-in-out 1s;
 }
 
 main nav div.top-slider-card img {
@@ -694,6 +697,7 @@ div.newletter form {
         width: 102%;
         bottom: 50%;
         transform: translateX(-10px);
+        z-index: 1;
     }
 
     main nav div.slider-buttons button {

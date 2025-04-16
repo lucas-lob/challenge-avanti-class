@@ -1,0 +1,13 @@
+@import url(colors.css);
+
+.undisplayed-card {
+    position: absolute;
+}
+
+.to-left {
+    right: 100%;
+}
+
+.to-right {
+    left: 100%;
+}

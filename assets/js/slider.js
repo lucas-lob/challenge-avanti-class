@@ -1,23 +1,79 @@
+function updateCards() {
+    cardsDiv = document.getElementById(sliderSettings.divCardsID)
+
+    for (let i = lastIndex + 1; i < cardsDiv.childElementCount; i++) {
+        cardsDiv.children[i].classList.add("undisplayed-card")
+        cardsDiv.children[i].classList.add("to-right")
+    }
+
+    for (let i = firtsIndex; i > 0; i--) {
+        cardsDiv.children[i - 1].classList.add("undisplayed-card")
+        cardsDiv.children[i - 1].classList.add("to-left")
+    }
+
+    for(let i = firtsIndex; i <= lastIndex; i++){
+        cardsDiv.children[i].classList.remove("undisplayed-card")
+        cardsDiv.children[i].classList.remove("to-left")
+        cardsDiv.children[i].classList.remove("to-right")
+    }
+}
+
 // Settings of the slider
 sliderSettings = {
     sliderID: "top-slider",
     buttonsClass: "slider-buttons",
-    cardsClass: "top-slider-cards"
+    divCardsID: "top-slider-cards"
 }
 
 
 
 // Global variables
 const slider = document.getElementById(sliderSettings.sliderID)
+let cardsDiv = document.getElementById(sliderSettings.divCardsID)
+
+let firtsIndex = 0
+let lastIndex = 4
 
 
 
+// Hides all initial undisplayed cards
+updateCards()
+
+    
 // Creates slider buttons
 oldHTML = slider.innerHTML
-slider.innerHTML = 
-`
+slider.innerHTML =
+    `
                 <div class="${sliderSettings.buttonsClass}">
-                    <button type="button" class="material-symbols-outlined left-arrow">arrow_back</button>
-                    <button type="button" class="material-symbols-outlined right-arrow">arrow_forward</button>
-                </div>
-` + oldHTML
+                    <button type="button" class="material-symbols-outlined">arrow_back</button>
+                    <button type="button" class="material-symbols-outlined">arrow_forward</button>
+                </div> 
+                ${oldHTML}
+    `
+
+
+
+// Left button function
+const leftBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(1)`)
+
+leftBtn.addEventListener("click", () => {
+    if (firtsIndex > 0) {
+        firtsIndex--
+        lastIndex--
+        updateCards()
+    }
+})
+
+
+
+// Right button function
+const rightBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(2)`)
+
+rightBtn.addEventListener("click", () => {
+    if (lastIndex < cardsDiv.childElementCount - 1) {
+        firtsIndex++
+        lastIndex++
+        updateCards()
+    }
+})
+
