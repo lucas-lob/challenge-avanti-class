@@ -54,7 +54,7 @@ const cardsInfos = [
 // Settings of the cards
 const cardsSettings = {
     divID: "top-slider",
-    divCardsClass: "top-slider-cards",
+    cardsClass: "top-slider-cards",
 }
 
 
@@ -67,7 +67,7 @@ div.innerHTML = ""
 cardsInfos.map((card) => {
     div.innerHTML +=
         `
-                        <div class=${cardsSettings.divCardsClass}>
+                        <div class=${cardsSettings.cardsClass}>
                             <div class="display-flex-column launch-nav-internal-spacing">
         
                                 <div class="display-flex justify-content-center">
