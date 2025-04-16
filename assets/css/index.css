@@ -139,17 +139,17 @@ main nav.no-mobile {
     display: none;
 }
 
-main nav div.top-slider {
+main nav div.top-slider-cards {
     gap: 10px;
 }
 
-main nav div.top-slider-cards {
+main nav div.top-slider-card {
     border: 1.5px solid #DDDDDD;
     border-radius: 10px;
     padding: 12px 8px;
 }
 
-main nav div.top-slider-cards img {
+main nav div.top-slider-card img {
     min-width: 152px;
 }
 

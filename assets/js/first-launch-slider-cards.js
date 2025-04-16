@@ -53,14 +53,14 @@ const cardsInfos = [
 
 // Settings of the cards
 const cardsSettings = {
-    divID: "top-slider",
-    cardsClass: "top-slider-cards",
+    divCardsID: "top-slider-cards",
+    cardsClass: "top-slider-card",
 }
 
 
 
 // Creates the card
-const div = document.getElementById(cardsSettings.divID)
+const div = document.getElementById(cardsSettings.divCardsID)
 
 div.innerHTML = ""
 
