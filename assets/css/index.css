@@ -687,16 +687,16 @@ div.newletter form {
         position: relative;
     }
 
-    main nav div.icons {
+    main nav div.slider-buttons {
         position: absolute;
         display: flex;
         justify-content: space-between;
-        width: 110%;
+        width: 102%;
         bottom: 50%;
         transform: translateX(-10px);
     }
 
-    main nav div.icons button {
+    main nav div.slider-buttons button {
         color: var(--primaryColor);
         background-color: #FFF;
         border: 1px solid var(--primaryColor);
@@ -707,7 +707,7 @@ div.newletter form {
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
     }
 
-    main nav div.icons button:hover{
+    main nav div.slider-buttons button:hover{
         color: #FFF;
         background-color: var(--primaryColor);
     }
