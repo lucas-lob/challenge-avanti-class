@@ -1,5 +1,6 @@
 function updateCards() {
     cardsDiv = document.getElementById(sliderSettings.divCardsID)
+    bottomCircles = document.querySelector(`div.${sliderSettings.bottomCirclesClass}`)
 
     for (let i = lastIndex + 1; i < cardsDiv.childElementCount; i++) {
         cardsDiv.children[i].classList.add("undisplayed-card")
@@ -11,18 +12,34 @@ function updateCards() {
         cardsDiv.children[i - 1].classList.add("to-left")
     }
 
-    for(let i = firtsIndex; i <= lastIndex; i++){
+    for (let i = firtsIndex; i <= lastIndex; i++) {
         cardsDiv.children[i].classList.remove("undisplayed-card")
         cardsDiv.children[i].classList.remove("to-left")
         cardsDiv.children[i].classList.remove("to-right")
+    }
+
+    // Bottoms circle animation
+    if(firtsIndex === 0){
+        bottomCircles.children[0].classList.add("slider-bottom-circle-selected")
+        bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
+        bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
+    } else if(lastIndex === cardsDiv.childElementCount - 1){
+        bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
+        bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
+        bottomCircles.children[2].classList.add("slider-bottom-circle-selected")
+    } else {
+        bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
+        bottomCircles.children[1].classList.add("slider-bottom-circle-selected")
+        bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
     }
 }
 
 // Settings of the slider
 sliderSettings = {
     sliderID: "top-slider",
+    divCardsID: "top-slider-cards",
     buttonsClass: "slider-buttons",
-    divCardsID: "top-slider-cards"
+    bottomCirclesClass: "slider-bottom-circles",
 }
 
 
@@ -36,10 +53,18 @@ let lastIndex = 4
 
 
 
-// Hides all initial undisplayed cards
-updateCards()
+// Creates bottom circles
+slider.innerHTML +=
+    `
+                <div class="${sliderSettings.bottomCirclesClass}">
+                    <span class="material-icons">circle</span>
+                    <span class="material-icons">circle</span>
+                    <span class="material-icons">circle</span>
+                </div> 
+    `
+let bottomCircles = document.querySelector(`div.${sliderSettings.bottomCirclesClass}`)
 
-    
+
 // Creates slider buttons
 oldHTML = slider.innerHTML
 slider.innerHTML =
@@ -77,3 +102,7 @@ rightBtn.addEventListener("click", () => {
     }
 })
 
+
+
+// Hides all initial undisplayed cards
+updateCards()
