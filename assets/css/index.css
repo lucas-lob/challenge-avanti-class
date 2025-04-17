@@ -244,6 +244,7 @@ main div.newletter p.newsletter-terms {
 }
 
 main div.newletter p.newsletter-terms a {
+    font-weight: bold;
     font-size: 12px;
     color: var(--onNewsletterFormsColor);
     text-decoration: underline;
