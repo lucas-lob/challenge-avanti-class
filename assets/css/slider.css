@@ -24,6 +24,7 @@
     font-size: 8px;
     color: var(--gray1);
     transition: all ease-in-out 0.25s;
+    cursor: default;
 }
 
 .slider-bottom-circle-selected {
