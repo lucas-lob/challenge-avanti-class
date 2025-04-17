@@ -37,7 +37,7 @@ a {
 }
 
 a:hover {
-    color: var(--primaryColor);
+    color: var(--primaryColor) !important;
 }
 
 nav ul {
@@ -133,6 +133,12 @@ main nav {
     flex-direction: column;
     margin: 56px 16px 0 16px;
     gap: 16px;
+}
+
+main nav > div:first-child a{
+    color: var(--gray0);
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 main nav.no-mobile {
@@ -671,6 +677,10 @@ div.newletter form {
     main nav {
         margin: 100px 0 100px;
         gap: 19px;
+    }
+
+    main nav > div:first-child a{
+        text-decoration: none;
     }
 
     main nav h4 {
