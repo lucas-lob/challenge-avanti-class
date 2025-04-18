@@ -51,6 +51,13 @@ img {
     max-width: 100%;
 }
 
+header {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    background-color: #FFF;
+}
+
 header *.bg-shadow {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -456,7 +463,7 @@ footer p.footer-text {
 
 /* HEADER */
 .top-bar-margin {
-    margin: 16px;
+    padding: 16px;
 }
 
 .top-bar-horizontal-gap {
@@ -599,11 +606,7 @@ div.newletter form {
 
     /* TAGS */
     header {
-        position: sticky;
-        top: 0;
-        z-index: 10;
         width: 100%;
-        background-color: #FFF;
     }
 
     header div.desktop {
