@@ -283,7 +283,7 @@ footer nav {
     margin-bottom: 48px;
 }
 
-footer div.footer-menu-item {
+footer nav > div {
     padding: 16px;
 }
 
@@ -302,15 +302,25 @@ footer div.footer-content {
 }
 
 footer nav h4 {
+    font-size: 16px;
     font-weight: bold;
 }
 
 footer nav ul {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 0;
+    overflow: hidden;
 }
 
 footer nav ul a {
     color: var(--gray0);
+}
+
+footer li.opening-hours p {
+    font-size: 12px;
+    line-height: 24px;
 }
 
 footer div.social-media-logos {
@@ -600,6 +610,13 @@ div.newletter form {
 
 
 
+/* FOOTER */
+.footer.menu.showed {
+    padding-top: 20px;
+    height: auto;
+}
+
+
 
 /* DESKTOP STYLE WITH CONTAINER */
 @media (min-width:760px) {
@@ -843,8 +860,12 @@ div.newletter form {
         gap: 110px;
     }
 
+    footer nav ul {
+        padding-top: 0;
+        height: auto;
+    }
+
     footer div.footer-menu-item {
-        padding: 0px;
         margin-bottom: 7px;
     }
 
@@ -861,13 +882,8 @@ div.newletter form {
         flex-direction: row;
     }
 
-    footer nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
     footer nav h4 {
+        font-size: 14px;
         margin-bottom: 11px;
         padding: 0;
     }
@@ -878,11 +894,6 @@ div.newletter form {
 
     footer hr {
         display: none;
-    }
-
-    footer li.opening-hours p {
-        font-size: 12px;
-        line-height: 24px;
     }
 
     footer img.pay-methods {
