@@ -702,7 +702,7 @@ footer p.footer-text {
 
     main div.anouncemment {
         position: relative;
-        height: 26.5vw;
+        height: min(26.5vw, 510px);
     }
 
     main div.anouncemment-img {
@@ -714,6 +714,7 @@ footer p.footer-text {
     main img.anouncemment-img {
         height: 100%;
         width: auto;
+        max-width: 685px;
         content: url(../images/body/anouncemment-img.png);
     }
 
@@ -728,7 +729,7 @@ footer p.footer-text {
     }
 
     main p.supersale-text {
-        letter-spacing: 0.39vw;
+        letter-spacing: min(0.39vw, 7.5px);
     }
 
     main nav {
