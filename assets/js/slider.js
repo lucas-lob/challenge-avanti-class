@@ -1,8 +1,8 @@
-function updateCards() {
+function updateCards(index) {
     cardsDiv = document.getElementById(sliderSettings.divCardsID)
     bottomCircles = document.querySelector(`div.${sliderSettings.bottomCirclesClass}`)
 
-    for (let i = lastIndex + 1; i < cardsDiv.childElementCount; i++) {
+    for (let i = index + 1; i < cardsDiv.childElementCount; i++) {
         cardsDiv.children[i].classList.add("undisplayed-card")
         cardsDiv.children[i].classList.add("to-right")
     }
@@ -12,7 +12,7 @@ function updateCards() {
         cardsDiv.children[i - 1].classList.add("to-left")
     }
 
-    for (let i = firtsIndex; i <= lastIndex; i++) {
+    for (let i = firtsIndex; i <= index; i++) {
         cardsDiv.children[i].classList.remove("undisplayed-card")
         cardsDiv.children[i].classList.remove("to-left")
         cardsDiv.children[i].classList.remove("to-right")
@@ -23,7 +23,7 @@ function updateCards() {
         bottomCircles.children[0].classList.add("slider-bottom-circle-selected")
         bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
         bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
-    } else if(lastIndex === cardsDiv.childElementCount - 1){
+    } else if(index === cardsDiv.childElementCount - 1){
         bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
         bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
         bottomCircles.children[2].classList.add("slider-bottom-circle-selected")
@@ -50,7 +50,8 @@ let cardsDiv = document.getElementById(sliderSettings.divCardsID)
 
 let firtsIndex = 0
 let lastIndex = 4
-
+let screenSize = window.innerWidth
+let screenResizeTimeout = 0
 
 
 // Creates bottom circles
@@ -104,5 +105,32 @@ rightBtn.addEventListener("click", () => {
 
 
 
-// Hides all initial undisplayed cards
-updateCards()
+// Hides all undisplayed cards 
+if (screenSize > 1340){
+    updateCards(4)
+} else if (screenSize > 760){
+    updateCards(3)
+} else {
+    updateCards(2)
+}
+
+
+
+// Hides all undisplayed cards in screen resize
+window.addEventListener("resize", () => {
+    clearTimeout(screenResizeTimeout)
+
+    screenResizeTimeout = setTimeout(() => {
+        screenSize = window.innerWidth
+        if (screenSize > 1340){
+            updateCards(4)
+        } else if (screenSize > 1050){
+            updateCards(3)
+        } else if (screenSize > 760){
+            updateCards(2)
+        } else {
+            updateCards(1)
+        }
+    }, 100)
+}) 
+
