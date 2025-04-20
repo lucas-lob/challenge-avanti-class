@@ -126,6 +126,14 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
         gap: 12px;
     }
 
+    header nav.hamburguer-menu-items li.hamburguer-menu-high-container {
+        display: none;
+    }
+
+    header nav.hamburguer-menu-items li.hamburguer-menu-medium-container {
+        display: none;
+    }
+
     header nav.hamburguer-menu-departments {
         overflow: auto;
         max-height: 329px;
@@ -231,5 +239,17 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
 
     header nav.hamburguer-menu-categories div.hamburguer-menu-info div.overlay img {
         opacity: 0;
+    }
+}
+
+@media (min-width:1200px){
+    header nav.hamburguer-menu-items li.hamburguer-menu-medium-container {
+        display: list-item;
+    }
+}
+
+@media (min-width:1500px){
+    header nav.hamburguer-menu-items li.hamburguer-menu-high-container {
+        display: list-item;
     }
 }
