@@ -80,6 +80,64 @@ function closeHamburguerMenu() {
 
 }
 
+
+
+// Department data
+const departmentsData = {
+    department1: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department2: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department3: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department4: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department5: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department6: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department7: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department8: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department9: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department10: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department11: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+    department12: {
+        name: "Departamento",
+        categories: ["Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria", "Categoria"]
+    },
+}
+
+console.log(departmentsData)
+
+
+
 // Global variables
 const hamburguerMenu = document.querySelector("header div.desktop div#hamburguer-menu")
 const menuHamburguerArea = document.querySelector("header div.desktop div#hamburguer-menu-area")
