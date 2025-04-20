@@ -66,6 +66,24 @@ header div.desktop {
     display: none;
 }
 
+header div.top-bar-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+header div.top-bar-input button {
+    position: absolute;
+    right: 16.3px;
+    background-color: #FFF;
+    border: none;
+    transition: all ease-in-out 0.25s;
+}
+
+header div.top-bar-input button:hover {
+    color: var(--primaryColor);
+}
+
 header div nav li {
     cursor: pointer;
     transition: all ease-in-out 0.25s;
@@ -499,9 +517,6 @@ footer p.footer-text {
     padding-left: 19px;
     transition: all ease-in-out 0.25s;
     outline: none;
-    background-image: url(../images/icon/search.png);
-    background-repeat: no-repeat;
-    background-position: 344.7px;
 }
 
 .top-bar-input-text::placeholder {
@@ -955,9 +970,6 @@ footer p.footer-text {
         margin-left: min(66px, 3.5vw);
         transition: all ease-in-out 0.25s;
         outline: none;
-        background-image: url(../images/icon/search.png);
-        background-repeat: no-repeat;
-        background-position: 97%;
     }
 
 
