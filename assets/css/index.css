@@ -84,15 +84,6 @@ header span.descount-price {
     padding: 0 5px;
 }
 
-main div.anouncemment {
-    width: 100%;
-}
-
-main div.anouncemment-img {
-    position: absolute;
-    width: 100%;
-}
-
 main img.anouncemment-img {
     content: url(../images/body/anouncemment-img-mobile.png);
     width: 225px;
@@ -112,25 +103,26 @@ main div.supersale {
 }
 
 main p.supersale-title-super {
-    font-size: 40px;
+    font-size: clamp(40px, 5.2vw, 100px);
     margin-bottom: -15px;
     font-family: Nunito, sans-serif;
 }
 
 main p.supersale-title-sale {
-    font-size: 40px;
+    font-size: clamp(40px, 5.2vw, 100px);
     font-weight: lighter;
     font-family: Nunito, sans-serif;
 }
 
 main p.supersale-text {
-    font-size: 12px;
+    font-size: clamp(12px, 1.3vw, 25px);
+    ;
     color: var(--primaryColor);
     font-family: Nunito, sans-serif;
 }
 
 main p.supersale-offer {
-    font-size: 32px;
+    font-size: clamp(32px, 3.12vw, 60px);
     color: #005CFF;
     font-family: Nunito, sans-serif;
 }
@@ -142,7 +134,7 @@ main nav {
     gap: 16px;
 }
 
-main nav > div:first-child a{
+main nav>div:first-child a {
     color: var(--gray0);
     font-weight: bold;
     text-decoration: underline;
@@ -197,11 +189,12 @@ main div.banner h2 {
     margin-bottom: 18px;
     font-weight: bold;
     font-family: Nunito, sans-serif;
-    font-size: 24px;
+    font-size: clamp(24px, 2.14vw, 30px);
 }
 
 main div.banner p {
     font-family: Nunito, sans-serif;
+    font-size: clamp(14px, 1.28vw, 18px);
 }
 
 main div.extended-banner h2 {
@@ -210,7 +203,7 @@ main div.extended-banner h2 {
     font-weight: bold;
     font-family: Nunito, sans-serif;
     letter-spacing: 0.5px;
-    font-size: 20px;
+    font-size: clamp(20px, 2.14vw, 30px);
 }
 
 main div.extended-banner div.small-container {
@@ -223,7 +216,7 @@ main div.extended-banner p {
     font-family: Nunito, sans-serif;
     color: #000;
     letter-spacing: 0.5px;
-    font-size: 12px;
+    font-size: clamp(12px, 1.28vw, 18px);
     width: 276px;
 }
 
@@ -242,18 +235,23 @@ main div.contact img {
 main div.contact p {
     font-family: Nunito, sans-serif;
     color: var(--onPrimaryColor);
-    font-size: 16px;
+    font-size: clamp(16px, 1.5vw, 30px);
     padding: 0 15px;
+}
+
+div.newletter form {
+    flex-direction: column;
+    gap: 16px;
 }
 
 main div.newletter p {
     font-weight: bold;
-    font-size: 16px;
+    font-size: clamp(16px, 1vw, 20px);
 }
 
 main div.newletter span.newsletter-word {
     font-weight: bold;
-    font-size: 16px;
+    font-size: clamp(16px, 1vw, 20px);
     color: var(--primaryColor);
 }
 
@@ -283,7 +281,7 @@ footer nav {
     margin-bottom: 48px;
 }
 
-footer nav > div {
+footer nav>div {
     padding: 16px;
 }
 
@@ -477,6 +475,10 @@ footer p.footer-text {
 
 
 /* HEADER */
+.avanti-logo {
+    max-width: 152px;
+}
+
 .top-bar-margin {
     padding: 16px;
 }
@@ -518,6 +520,11 @@ footer p.footer-text {
 
 
 /* LAUNCH */
+.launch-text {
+    font-weight: bold;
+    font-size: clamp(16px, 1vw, 20px);
+}
+
 .launch-nav-internal-spacing {
     gap: 8px;
 }
@@ -567,11 +574,6 @@ footer p.footer-text {
     margin-top: 56px;
 }
 
-div.newletter form {
-    flex-direction: column;
-    gap: 16px;
-}
-
 .newletter-form-padding {
     padding: 38px 16px;
 }
@@ -616,6 +618,22 @@ div.newletter form {
 
 
 /* FOOTER */
+.footer-instagram-logo {
+    max-width: 19px;
+}
+
+.footer-facebook-logo {
+    max-width: 10px;
+}
+
+.footer-youtube-logo {
+    max-width: 26px;
+}
+
+.footer-tiktok-logo {
+    max-width: 18px;
+}
+
 .footer-menu-showed {
     padding-top: 20px;
     max-height: 500px;
@@ -668,25 +686,25 @@ div.newletter form {
     }
 
     main div.anouncemment {
-        margin-left: 251px;
-        width: auto;
+        position: relative;
+        height: 26.5vw;
     }
 
     main div.anouncemment-img {
-        position: static;
+        height: 100%;
+        position: absolute;
+        left: -1.3vw;
     }
 
     main img.anouncemment-img {
+        height: 100%;
+        width: auto;
         content: url(../images/body/anouncemment-img.png);
-        width: 100%;
-        height: auto;
     }
 
     main div.anouncemment-text {
-        width: 100%;
-        height: auto;
         gap: 10px;
-        margin-right: 0;
+        margin-right: 3.6vw;
     }
 
     main div.supersale {
@@ -694,21 +712,8 @@ div.newletter form {
         align-items: baseline;
     }
 
-    main p.supersale-title-super {
-        font-size: 100px;
-    }
-
-    main p.supersale-title-sale {
-        font-size: 100px;
-    }
-
     main p.supersale-text {
-        font-size: 25px;
-        letter-spacing: 7.5px;
-    }
-
-    main p.supersale-offer {
-        font-size: 60px;
+        letter-spacing: 0.39vw;
     }
 
     main nav {
@@ -716,7 +721,7 @@ div.newletter form {
         gap: 19px;
     }
 
-    main nav > div:first-child a{
+    main nav>div:first-child a {
         text-decoration: none;
     }
 
@@ -758,7 +763,7 @@ div.newletter form {
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
     }
 
-    main nav div.slider-buttons button:hover{
+    main nav div.slider-buttons button:hover {
         color: #FFF;
         background-color: var(--primaryColor);
     }
@@ -777,9 +782,8 @@ div.newletter form {
 
     main div.banner {
         flex-direction: row;
-        justify-content: space-between;
         margin: auto;
-        gap: 0px;
+        gap: 1.95vw;
     }
 
     main div.banner div:last-child {
@@ -790,32 +794,28 @@ div.newletter form {
         margin-bottom: 22px;
         font-weight: bold;
         font-family: Nunito, sans-serif;
-        font-size: 30px;
     }
 
     main div.banner p {
         font-family: Nunito, sans-serif;
-        font-size: 18px;
     }
 
     main div.extended-banner div.small-container {
         flex-direction: row;
         padding: 0px;
-        gap: 0px;
+        gap: 2.55vw;
     }
 
     main div.extended-banner h2 {
         color: var(--onBannerColor);
         font-weight: bold;
         font-family: Nunito, sans-serif;
-        font-size: 30px;
     }
 
     main div.extended-banner p {
         font-family: Nunito, sans-serif;
         color: var(--onBannerColor);
         letter-spacing: 1px;
-        font-size: 18px;
         width: 360px;
     }
 
@@ -831,20 +831,9 @@ div.newletter form {
         content: url(../images/body/contact-bg.png);
     }
 
-    main div.contact p {
-        font-family: Nunito, sans-serif;
-        color: var(--onPrimaryColor);
-        font-size: 30px;
-    }
-
-    main div.newletter p {
-        font-weight: bold;
-        font-size: 20px;
-    }
-
-    main div.newletter span.newsletter-word {
-        font-size: 20px;
-        color: var(--primaryColor);
+    main div.newletter form {
+        flex-direction: row;
+        gap: 1.25vw;
     }
 
     main div.newletter p.newsletter-terms {
@@ -864,9 +853,10 @@ div.newletter form {
     }
 
     footer nav {
+        width: 100%;
         display: flex;
+        justify-content: space-between;
         margin-bottom: 64px;
-        gap: 110px;
     }
 
     footer nav ul {
@@ -883,7 +873,7 @@ div.newletter form {
     }
 
     footer div.footer-logos {
-        margin-right: 142px;
+        margin-right: 7.3vw;
         align-items: start;
     }
 
@@ -920,13 +910,13 @@ div.newletter form {
 
     /* CONTAINERS */
     .container {
-        width: 1177px;
+        width: clamp(16px, 65.5vw, 1288px);
         margin-left: auto;
         margin-right: auto;
     }
 
     .small-container {
-        width: 1177px;
+        width: clamp(16px, 65.5vw, 1177px);
         margin-left: auto;
         margin-right: auto;
 
@@ -935,12 +925,17 @@ div.newletter form {
 
 
     /* HEADER */
+    .avanti-logo {
+        width: 10vw;
+    }
+
     .top-descount-announcement-padding {
         padding: 10px 0px;
     }
 
     .top-bar-margin {
         margin: 17px 0 23px;
+        padding: 0;
     }
 
     .top-bar-horizontal-very-small-gap {
@@ -948,21 +943,21 @@ div.newletter form {
     }
 
     .top-bar-horizontal-small-gap {
-        gap: 20px;
+        gap: 1.25vw;
     }
 
     .top-bar-input-text {
-        width: 594px;
+        width: min(594px, 34vw);
         height: 40px;
         border: 1px solid var(--inputTextBorderColor);
         border-radius: 10px;
         padding-left: 24px;
-        margin-left: 66px;
+        margin-left: min(66px, 3.5vw);
         transition: all ease-in-out 0.25s;
         outline: none;
         background-image: url(../images/icon/search.png);
         background-repeat: no-repeat;
-        background-position: 577.7px;
+        background-position: 97%;
     }
 
 
@@ -990,18 +985,18 @@ div.newletter form {
 
     /* BANNER  */
     .extended-banner {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        margin-top: 2.6vw;
+        margin-bottom: 2.6vw;
+        padding-top: 2.6vw;
+        padding-bottom: 2.6vw;
     }
 
     .extended-banner-item-horizontal-gap {
-        gap: 20px;
+        gap: 1vw;
     }
 
     .extended-banner-vertical-gap {
-        gap: 50px;
+        gap: 2.60vw;
     }
 
     .extended-banner-text-width {
@@ -1009,56 +1004,48 @@ div.newletter form {
     }
 
     .banner-vertical-gap {
-        gap: 22px;
+        gap: 1.14vw;
     }
 
     .banner-text-width {
-        width: 487px;
+        width: 25.36vw;
     }
 
     .banner-image-padding {
-        padding: 109px 64px;
+        padding: 5.6vw 3.3vw;
     }
 
 
 
     /* NEWLETTER FORM */
     .newletter-bg {
-        width: 1260px;
+        width: 65.62vw;
         background-color: var(--gray2);
         border: 0px solid var(--gray2);
     }
 
     .newletter {
-        margin-top: 64px;
-    }
-
-    div.newletter form {
-        flex-direction: row;
-        gap: 24px;
+        margin-top: 3.33vw;
     }
 
     .newletter-form-padding {
-        padding: 64px 0px;
+        padding: 3.33vw 0;
     }
 
     .newletter-form-input-text {
-        width: 280px;
+        width: 14.58vw;
         height: 48px;
         border: 1px solid var(--gray2);
         border-radius: 8px;
-        padding-left: 24px;
+        padding-left: 1.25vw;
         transition: all ease-in-out 0.25s;
         outline: none;
-        background-image: url(../images/icon/search.png);
-        background-repeat: no-repeat;
-        background-position: 577.7px;
     }
 
     .newletter-form-input-submit {
-        width: 128px;
+        width: 6.66vw;
         height: 48px;
-        padding: 14px;
+        padding: 0.7vw;
         background-color: var(--primaryColor);
         color: #FFF;
         border: 0px solid var(--primaryColor);
