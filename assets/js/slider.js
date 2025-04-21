@@ -35,7 +35,7 @@ function updateCards() {
 }
 
 function responsiveUpdateCards() {
-    if (screenSize > 1340) {
+    if (screenSize > sliderSettings.desktopMinScreenSize) {
         if (displayedCards !== 5) {
             displayedCards = 5
             firstIndex = 0
@@ -43,7 +43,7 @@ function responsiveUpdateCards() {
 
             updateCards()
         }
-    } else if (screenSize > 1050) {
+    } else if (screenSize > sliderSettings.bigTabletMinScreenSize) {
         if (displayedCards !== 4) {
             displayedCards = 4
             firstIndex = 0
@@ -51,7 +51,7 @@ function responsiveUpdateCards() {
 
             updateCards()
         }
-    } else if (screenSize > 760) {
+    } else if (screenSize > sliderSettings.smallTabletMinScreenSize) {
         if (displayedCards !== 3) {
             displayedCards = 3
             firstIndex = 0
@@ -78,6 +78,9 @@ sliderSettings = {
     divCardsID: "top-slider-cards",
     buttonsClass: "slider-buttons",
     bottomCirclesClass: "slider-bottom-circles",
+    desktopMinScreenSize: 1360,
+    bigTabletMinScreenSize: 1100,
+    smallTabletMinScreenSize: 820,
 }
 
 
@@ -145,7 +148,7 @@ rightBtn.addEventListener("click", () => {
 
 
 // Initializes the cards 
-if (screenSize > 1340) {
+if (screenSize > sliderSettings.desktopMinScreenSize) {
     updateCards()
 } else {
     responsiveUpdateCards()
