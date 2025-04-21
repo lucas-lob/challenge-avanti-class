@@ -717,8 +717,14 @@ footer p.footer-text {
         margin-right: 4px;
     }
 
-    header nav a.menu {
-        gap: 8px;
+    header nav.hamburguer-menu-items ul > li:first-child p {
+        display: flex;
+        font-weight: bold;
+        gap: min(0.4vw, 8px);
+    }
+
+    header nav.hamburguer-menu-items ul > li:first-child span {
+        font-size: 1.125rem;
     }
 
     header span.descount-ticket {
