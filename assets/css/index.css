@@ -389,6 +389,10 @@ footer p.footer-text {
     line-height: 20px;
 }
 
+footer p.footer-text::after {
+    content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.";
+}
+
 /* DISPLAYS */
 .display-flex {
     display: flex;
@@ -717,20 +721,20 @@ footer p.footer-text {
         margin-right: 4px;
     }
 
-    header nav.hamburguer-menu-items ul > li:first-child p {
+    header nav.hamburguer-menu-items ul>li:first-child p {
         display: flex;
         font-weight: bold;
         gap: min(0.4vw, 8px);
     }
 
-    header nav.hamburguer-menu-items ul > li:first-child span {
+    header nav.hamburguer-menu-items ul>li:first-child span {
         font-size: 1.125rem;
     }
 
     header span.descount-ticket {
         font-style: italic;
     }
-    
+
     header div.shopping-car a {
         position: relative;
     }
@@ -783,10 +787,6 @@ footer p.footer-text {
     main nav {
         margin: min(5vw, 100px) 0;
         gap: 19px;
-    }
-
-    main nav.no-mobile {
-
     }
 
     main nav>div:first-child a {
@@ -970,10 +970,8 @@ footer p.footer-text {
         width: 545px;
     }
 
-    footer p.footer-text {
-        padding: 0 51.5px;
-        font-size: 12px;
-        line-height: 20px;
+    footer p.footer-text::after {
+        content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.";
     }
 
 
