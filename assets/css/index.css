@@ -169,6 +169,7 @@ main nav div.top-slider-cards {
 }
 
 main nav div.top-slider-card {
+    background-color: #FFF;
     border: 1.5px solid #DDDDDD;
     border-radius: 10px;
     padding: 12px 8px;
