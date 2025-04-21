@@ -41,7 +41,7 @@ const cardsInfos = [
     {
         imgSrc: "assets/images/body/launch.png",
         linkUrl: "/pages/site-in-construction.html",
-        description: "Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+        description: "5 Lorem ipsum dolor sit amet consectetuer adipiscing elit",
         originalPrice: "R$ 100,00",
         descountedPrice: "R$79,90",
         off: "10%",

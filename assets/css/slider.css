@@ -1,17 +1,24 @@
 @import url(colors.css);
 
+.unshowed-card {
+    display: none;
+}
+
 .undisplayed-card {
     position: absolute;
 }
 
-.to-left {
-    right: 100%;
-}
-
 .to-right {
-    left: 100%;
+    left: calc(100% + 10px);
 }
 
+.to-left-test {
+    transform: translateX(-100%);
+}
+
+
+
+/* BOTTOM BUTTONS */
 .slider-bottom-circles {
     display: flex;
     justify-content: center;
@@ -32,3 +39,21 @@
     color: var(--gray0) !important;
 }
 
+
+
+/* CARD WIDTH */
+.width-5 {
+    width: calc((65.5vw - 40px) / 5 - 18px);
+}
+
+.width-4 {
+    width: calc((65.5vw - 40px) / 4 - 18px);
+}
+
+.width-3 {
+    width: calc((65.5vw - 40px) / 3 - 18px);
+}
+
+.width-2 {
+    width: calc((65.5vw - 40px) / 2 - 18px);
+}
