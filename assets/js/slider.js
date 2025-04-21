@@ -162,6 +162,6 @@ window.addEventListener("resize", () => {
     screenResizeTimeout = setTimeout(() => {
         screenSize = window.innerWidth
         responsiveUpdateCards()
-    }, 100)
+    }, 50)
 })
 
