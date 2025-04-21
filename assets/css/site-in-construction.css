@@ -27,15 +27,7 @@ main div.bg {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px 0;
-    background-color: var(--gray2);
-    border-radius: 50px;
-    box-shadow: 4px 4px 5px #999;
     transition: all ease-in-out 0.25s;
-}
-
-main div.bg:hover{
-    background-color: var(--secundaryColor);
-
 }
 
 main div.img{
@@ -54,11 +46,6 @@ main p {
     color: var(--onBannerColor);
     font-weight: 100;
     transition: all ease-in-out 0.25s;
-}
-
-
-main div.bg:hover p{
-    color: #FFF;
 }
 
 @media (min-width:760px){
