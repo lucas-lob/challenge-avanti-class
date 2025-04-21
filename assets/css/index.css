@@ -781,8 +781,12 @@ footer p.footer-text {
     }
 
     main nav {
-        margin: 100px 0 100px;
+        margin: min(5vw, 100px) 0;
         gap: 19px;
+    }
+
+    main nav.no-mobile {
+
     }
 
     main nav>div:first-child a {
@@ -800,6 +804,8 @@ footer p.footer-text {
 
     main nav.no-mobile {
         display: flex;
+        margin: min(3vw, 64px) auto;
+        gap: 19px;
     }
 
     main nav div.top-slider {
