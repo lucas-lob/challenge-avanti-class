@@ -724,6 +724,23 @@ footer p.footer-text {
     header span.descount-ticket {
         font-style: italic;
     }
+    
+    header div.shopping-car a {
+        position: relative;
+    }
+
+    header div.shopping-car a p {
+        position: absolute;
+        left: 70%;
+        top: -25%;
+        display: inline-block;
+        padding: 2px 6px;
+        font-size: 0.75rem;
+        font-family: Nunito, sans-serif;
+        border-radius: 50%;
+        background-color: var(--primaryColor);
+        color: #FFF;
+    }
 
     main div.anouncemment {
         position: relative;
