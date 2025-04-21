@@ -175,6 +175,25 @@ main nav div.top-slider-card {
     transition: all ease-in-out 1s;
 }
 
+main nav div.top-slider-card a {
+    position: relative;
+}
+
+main nav div.top-slider-card a p {
+    position: absolute;
+    display: inline-block;
+    font-size: 0.625rem;
+    font-weight: bold;
+    padding: 1px 5px;
+    background-color: var(--darkBlueColor);
+    color: #FFF;
+    border-radius: 4px;
+}
+
+main nav div.top-slider-card h4 {
+    text-decoration: underline;
+}
+
 main nav div.top-slider-card img {
     min-width: 152px;
 }

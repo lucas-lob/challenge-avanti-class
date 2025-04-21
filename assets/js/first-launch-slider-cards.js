@@ -117,6 +117,8 @@ cardsInfos.map((card) => {
         
                                 <div class="display-flex justify-content-center">
                                     <a href="${card.linkUrl}">
+                                        <p>NOVO</p>
+
                                         <img src="${card.imgSrc}" alt="launch" title="Ver lançamento">
                                     </a>
                                 </div>
