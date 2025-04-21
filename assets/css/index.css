@@ -497,6 +497,12 @@ footer p.footer-text {
     max-width: 152px;
 }
 
+.top-search-bar-result {
+    font-size: 14px;
+    color: var(--redColor);
+    margin-bottom: min(0.7vw, 15px);
+}
+
 .top-bar-margin {
     padding: 16px;
 }
