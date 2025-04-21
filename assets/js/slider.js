@@ -4,26 +4,14 @@ function resetCards() {
 
     for (let i = 0; i < cardsDiv.childElementCount; i++) {
         cardTranslate[i] = 0
-        cardsDiv.children[i].classList.remove("width-2")
-        cardsDiv.children[i].classList.remove("width-3")
-        cardsDiv.children[i].classList.remove("width-4")
-        cardsDiv.children[i].classList.remove("width-5")
-        cardsDiv.children[i].classList.add("unshowed-card")
-    }
-
-    for (let i = lastIndex + 1; i < cardsDiv.childElementCount; i++) {
-        cardsDiv.children[i].classList.add(`width-${displayedCards}`)
-        cardsDiv.children[i].classList.add("undisplayed-card")
-        cardsDiv.children[i].classList.add("to-right")
-        cardsDiv.children[i].classList.remove("unshowed-card")
+        cardsDiv.children[i].classList = sliderSettings.cardsClass
         cardsDiv.children[i].style.transform = ""
-    }
 
-    for (let i = firstIndex; i <= lastIndex; i++) {
-        cardsDiv.children[i].classList.remove("undisplayed-card")
-        cardsDiv.children[i].classList.remove("to-right")
-        cardsDiv.children[i].classList.remove("unshowed-card")
-        cardsDiv.children[i].style.transform = ""
+        if(i > lastIndex){
+            cardsDiv.children[i].classList.add(`width-${displayedCards}`)
+            cardsDiv.children[i].classList.add("undisplayed-card")
+            cardsDiv.children[i].classList.add("to-right")
+        }
     }
 }
 
@@ -100,6 +88,7 @@ function sliderLeftMoviment() {
 sliderSettings = {
     sliderID: "top-slider",
     divCardsID: "top-slider-cards",
+    cardsClass: "top-slider-card",
     buttonsClass: "slider-buttons",
     bottomCirclesClass: "slider-bottom-circles",
     desktopMinScreenSize: 1360,
