@@ -1,29 +1,29 @@
-function updateCards(index) {
+function updateCards() {
     cardsDiv = document.getElementById(sliderSettings.divCardsID)
     bottomCircles = document.querySelector(`div.${sliderSettings.bottomCirclesClass}`)
 
-    for (let i = index + 1; i < cardsDiv.childElementCount; i++) {
+    for (let i = lastIndex + 1; i < cardsDiv.childElementCount; i++) {
         cardsDiv.children[i].classList.add("undisplayed-card")
         cardsDiv.children[i].classList.add("to-right")
     }
 
-    for (let i = firtsIndex; i > 0; i--) {
+    for (let i = firstIndex; i > 0; i--) {
         cardsDiv.children[i - 1].classList.add("undisplayed-card")
         cardsDiv.children[i - 1].classList.add("to-left")
     }
 
-    for (let i = firtsIndex; i <= index; i++) {
+    for (let i = firstIndex; i <= lastIndex; i++) {
         cardsDiv.children[i].classList.remove("undisplayed-card")
         cardsDiv.children[i].classList.remove("to-left")
         cardsDiv.children[i].classList.remove("to-right")
     }
 
     // Bottoms circle animation
-    if(firtsIndex === 0){
+    if (firstIndex === 0) {
         bottomCircles.children[0].classList.add("slider-bottom-circle-selected")
         bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
         bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
-    } else if(index === cardsDiv.childElementCount - 1){
+    } else if (lastIndex === cardsDiv.childElementCount - 1) {
         bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
         bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
         bottomCircles.children[2].classList.add("slider-bottom-circle-selected")
@@ -33,6 +33,44 @@ function updateCards(index) {
         bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
     }
 }
+
+function responsiveUpdateCards() {
+    if (screenSize > 1340) {
+        if (displayedCards !== 5) {
+            displayedCards = 5
+            firstIndex = 0
+            lastIndex = 4
+
+            updateCards()
+        }
+    } else if (screenSize > 1050) {
+        if (displayedCards !== 4) {
+            displayedCards = 4
+            firstIndex = 0
+            lastIndex = 3
+
+            updateCards()
+        }
+    } else if (screenSize > 760) {
+        if (displayedCards !== 3) {
+            displayedCards = 3
+            firstIndex = 0
+            lastIndex = 2
+
+            updateCards()
+        }
+    } else {
+        if (displayedCards !== 2) {
+            displayedCards = 2
+            firstIndex = 0
+            lastIndex = 1
+
+            updateCards()
+        }
+    }
+}
+
+
 
 // Settings of the slider
 sliderSettings = {
@@ -48,8 +86,9 @@ sliderSettings = {
 const slider = document.getElementById(sliderSettings.sliderID)
 let cardsDiv = document.getElementById(sliderSettings.divCardsID)
 
-let firtsIndex = 0
+let firstIndex = 0
 let lastIndex = 4
+let displayedCards = 5
 let screenSize = window.innerWidth
 let screenResizeTimeout = 0
 
@@ -83,8 +122,8 @@ slider.innerHTML =
 const leftBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(1)`)
 
 leftBtn.addEventListener("click", () => {
-    if (firtsIndex > 0) {
-        firtsIndex--
+    if (firstIndex > 0) {
+        firstIndex--
         lastIndex--
         updateCards()
     }
@@ -97,7 +136,7 @@ const rightBtn = document.querySelector(`div.${sliderSettings.buttonsClass} butt
 
 rightBtn.addEventListener("click", () => {
     if (lastIndex < cardsDiv.childElementCount - 1) {
-        firtsIndex++
+        firstIndex++
         lastIndex++
         updateCards()
     }
@@ -105,15 +144,12 @@ rightBtn.addEventListener("click", () => {
 
 
 
-// Hides all undisplayed cards 
-if (screenSize > 1340){
-    updateCards(4)
-} else if (screenSize > 760){
-    updateCards(3)
+// Initializes the cards 
+if (screenSize > 1340) {
+    updateCards()
 } else {
-    updateCards(2)
+    responsiveUpdateCards()
 }
-
 
 
 // Hides all undisplayed cards in screen resize
@@ -122,15 +158,7 @@ window.addEventListener("resize", () => {
 
     screenResizeTimeout = setTimeout(() => {
         screenSize = window.innerWidth
-        if (screenSize > 1340){
-            updateCards(4)
-        } else if (screenSize > 1050){
-            updateCards(3)
-        } else if (screenSize > 760){
-            updateCards(2)
-        } else {
-            updateCards(1)
-        }
+        responsiveUpdateCards()
     }, 100)
-}) 
+})
 
