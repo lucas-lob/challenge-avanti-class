@@ -7,7 +7,7 @@ function resetCards() {
         cardsDiv.children[i].classList = sliderSettings.cardsClass
         cardsDiv.children[i].style.transform = ""
 
-        if(i > lastIndex){
+        if (i > lastIndex) {
             cardsDiv.children[i].classList.add(`width-${displayedCards}`)
             cardsDiv.children[i].classList.add("undisplayed-card")
             cardsDiv.children[i].classList.add("to-right")
@@ -49,7 +49,7 @@ function responsiveResetCards() {
             resetCards()
         }
     }
-    
+
     updateBottomButtons()
 }
 
@@ -83,6 +83,54 @@ function sliderLeftMoviment() {
     }
 }
 
+function createArrowButtons() {
+    oldHTML = slider.innerHTML
+    slider.innerHTML =
+        `
+                <div class="${sliderSettings.buttonsClass}">
+                    <button type="button" class="material-symbols-outlined">arrow_back</button>
+                    <button type="button" class="material-symbols-outlined">arrow_forward</button>
+                </div> 
+                ${oldHTML}
+    `
+
+
+
+    // Left button function
+    const leftBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(1)`)
+
+    leftBtn.addEventListener("click", () => {
+        clearTimeout(sliderMovementTimeout)
+
+        sliderMovementTimeout = setTimeout(() => {
+            if (firstIndex > 0) {
+                sliderLeftMoviment()
+                firstIndex--
+                lastIndex--
+                updateBottomButtons()
+            }
+        }, 200)
+    })
+
+
+
+    // Right button function
+    const rightBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(2)`)
+
+    rightBtn.addEventListener("click", () => {
+        clearTimeout(sliderMovementTimeout)
+
+        sliderMovementTimeout = setTimeout(() => {
+            if (lastIndex < cardsDiv.childElementCount - 1) {
+                firstIndex++
+                lastIndex++
+                sliderRightMoviment()
+                updateBottomButtons()
+            }
+        }, 200)
+    })
+}
+
 
 // Settings of the slider
 sliderSettings = {
@@ -103,8 +151,8 @@ const slider = document.getElementById(sliderSettings.sliderID)
 let cardsDiv = document.getElementById(sliderSettings.divCardsID)
 
 let firstIndex = 0
-let lastIndex = 4
-let displayedCards = 5
+let lastIndex = 0
+let displayedCards = 0
 let screenSize = window.innerWidth
 let screenResizeTimeout = 0
 let sliderMovementTimeout = 0
@@ -128,61 +176,12 @@ slider.innerHTML +=
 let bottomCircles = document.querySelector(`div.${sliderSettings.bottomCirclesClass}`)
 
 
-// Creates slider buttons
-oldHTML = slider.innerHTML
-slider.innerHTML =
-    `
-                <div class="${sliderSettings.buttonsClass}">
-                    <button type="button" class="material-symbols-outlined">arrow_back</button>
-                    <button type="button" class="material-symbols-outlined">arrow_forward</button>
-                </div> 
-                ${oldHTML}
-    `
-
-
-
-// Left button function
-const leftBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(1)`)
-
-leftBtn.addEventListener("click", () => {
-    clearTimeout(sliderMovementTimeout)
-
-    sliderMovementTimeout = setTimeout(() => {
-        if (firstIndex > 0) {
-            sliderLeftMoviment()
-            firstIndex--
-            lastIndex--
-            updateBottomButtons()
-        }
-    }, 200)
-})
-
-
-
-// Right button function
-const rightBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(2)`)
-
-rightBtn.addEventListener("click", () => {
-    clearTimeout(sliderMovementTimeout)
-
-    sliderMovementTimeout = setTimeout(() => {
-        if (lastIndex < cardsDiv.childElementCount - 1) {
-            firstIndex++
-            lastIndex++
-            sliderRightMoviment()
-            updateBottomButtons()
-        }
-    }, 200)
-})
-
-
 
 // Initializes the slider 
-if (screenSize > sliderSettings.desktopMinScreenSize) {
-    resetCards()
-} else {
-    responsiveResetCards()
+if(screenSize > sliderSettings.smallTabletMinScreenSize){
+    createArrowButtons()
 }
+responsiveResetCards()
 
 
 
