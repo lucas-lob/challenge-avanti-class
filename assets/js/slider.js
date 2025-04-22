@@ -8,11 +8,11 @@ function startCardsPosition() {
 }
 
 function updateBottomButtons() {
-    if (firstIndex === 0) {
+    if (firstCardVisible === 1) {
         bottomCircles.children[0].classList.add("slider-bottom-circle-selected")
         bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
         bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
-    } else if (lastIndex === cardsDiv.childElementCount - 1) {
+    } else if (lastCardVisible === cardsDiv.childElementCount) {
         bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
         bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
         bottomCircles.children[2].classList.add("slider-bottom-circle-selected")
@@ -192,6 +192,7 @@ window.addEventListener("resize", () => {
     screenResizeTimeout = setTimeout(() => {
         screenSize = window.innerWidth
         updateScreenSizeInfos()
+        updateBottomButtons()
 
         cardsDiv.children[0].scrollIntoView({
             behavior: "smooth",
