@@ -1,5 +1,19 @@
 @import url(colors.css);
 
+
+/* ARROWS BUTTONS */
+.arrow-button {
+    display: none;
+}
+
+@media (min-width: 820px){
+    .arrow-button {
+        display: flex;
+    }
+}
+
+
+
 /* CARDS SETTINGS */
 .top-slider-cards {
     position: relative;

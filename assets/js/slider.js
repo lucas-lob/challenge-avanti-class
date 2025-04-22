@@ -28,7 +28,6 @@ function sliderRightMoviment() {
     lastCardVisible++
 
     try {
-        
         cardsDiv.children[lastCardVisible - 1].scrollIntoView({
             behavior: "smooth",
             block: "nearest"
@@ -56,7 +55,7 @@ function createArrowButtons() {
     oldHTML = slider.innerHTML
     slider.innerHTML =
         `
-                <div class="${sliderSettings.buttonsClass}">
+                <div class="${sliderSettings.buttonsClass} arrow-button">
                     <button type="button" class="material-symbols-outlined">arrow_back</button>
                     <button type="button" class="material-symbols-outlined">arrow_forward</button>
                 </div> 
@@ -64,7 +63,7 @@ function createArrowButtons() {
     `
 
     // Left button function
-    const leftBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(1)`)
+    let leftBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(1)`)
 
     leftBtn.addEventListener("click", () => {
         clearTimeout(sliderMovementTimeout)
@@ -78,7 +77,7 @@ function createArrowButtons() {
 
 
     // Right button function
-    const rightBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(2)`)
+    let rightBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(2)`)
 
     rightBtn.addEventListener("click", () => {
         clearTimeout(sliderMovementTimeout)
@@ -90,25 +89,6 @@ function createArrowButtons() {
             updateBottomButtons()
         }, 200)
     })
-}
-
-function updateArrowButtons() {
-    arrowButtons = document.querySelectorAll(`div.${sliderSettings.buttonsClass}`)
-
-    // If desktop screen size
-    if (screenSize > sliderSettings.smallTabletMinScreenSize) {
-        // If exists no arrow buttons
-        if (arrowButtons.length === 0) {
-            createArrowButtons()
-        }
-    }
-    // If mobile screen size
-    else {
-        // If exists arrow buttons
-        if (arrowButtons.length !== 0) {
-            arrowButtons[0].remove()
-        }
-    }
 }
 
 function updateScreenSizeInfos() {
@@ -211,7 +191,6 @@ window.addEventListener("resize", () => {
 
     screenResizeTimeout = setTimeout(() => {
         screenSize = window.innerWidth
-        updateArrowButtons()
         updateScreenSizeInfos()
 
         cardsDiv.children[0].scrollIntoView({
