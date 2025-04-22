@@ -82,17 +82,24 @@ header div.top-bar-input button {
 }
 
 header div.top-search-bar-result p {
-    font-size: 14px;
-    color: var(--redColor);
-    margin-bottom: min(0.7vw, 15px);
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+header div.top-search-bar-result button span {
+    font-size: 1.2rem;
+    color: var(--gray1);
+    transition: all ease-in-out 0.25s;
 }
 
 header div.top-search-bar-result {
     position: absolute;
     top: 110%;
-    width: 100%;
+    width: calc(100% - 15px);
+    height: 40px;
     background-color: #FFF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
 }
 
 header div nav li {
@@ -726,12 +733,16 @@ footer p.footer-text::after {
         position: absolute;
         margin-left: min(66px, 3.5vw);
         top: 110%;
-        width: calc(24px + min(594px, 34vw));
+        width: calc(24px + min(594px, 34vw) - 15px);
         background-color: #FFF;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     header div.top-bar-input button:hover {
+        color: var(--primaryColor);
+    }
+
+    header div.top-search-bar-result button span:hover {
         color: var(--primaryColor);
     }
 
