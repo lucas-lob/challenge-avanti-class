@@ -4,8 +4,14 @@
 .top-slider-cards {
     position: relative;
     overflow: scroll;
+    scrollbar-width: none;
     gap: 10px;
 }
+
+.top-slider-card::-webkit-scrollbar {
+    display: none;
+}
+
 
 .top-slider-cards > :first-child {
     position: relative;
