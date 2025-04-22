@@ -448,6 +448,10 @@ footer p.footer-text::after {
     justify-content: right;
 }
 
+.none {
+    display: none;
+}
+
 
 
 /* POSITIONS */
