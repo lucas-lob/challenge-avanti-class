@@ -134,8 +134,6 @@ const departmentsData = {
     },
 }
 
-console.log(departmentsData)
-
 
 
 // Global variables
