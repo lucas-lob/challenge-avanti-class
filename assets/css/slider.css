@@ -22,7 +22,7 @@
     gap: 10px;
 }
 
-.top-slider-card::-webkit-scrollbar {
+.top-slider-cards::-webkit-scrollbar {
     display: none;
 }
 

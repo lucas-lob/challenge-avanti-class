@@ -151,16 +151,10 @@ let screenSize = window.innerWidth
 
 let screenResizeTimeout = 0
 let sliderMovementTimeout = 0
+let touchTimeout = 0
 
 let firstCardVisible = 1
 let lastCardVisible = 0
-
-
-
-cardTranslate = {}
-for (let i = 0; i < cardsDiv.childElementCount; i++) {
-    cardTranslate[i] = 0
-}
 
 
 
@@ -175,6 +169,29 @@ slider.innerHTML +=
     `
 let bottomCircles = document.querySelector(`div.${sliderSettings.bottomCirclesClass}`)
 
+
+
+// Adds touch screen event to change bottom circles in mobile devices
+slider.addEventListener("touchmove", () => {
+    clearTimeout(touchTimeout)
+    touchTimeout = setTimeout(() => {
+        let scrollX = cardsDiv.scrollLeft
+        let maxScrolLX = cardsDiv.scrollWidth - cardsDiv.getBoundingClientRect().width - 10
+        if (scrollX === 0) {
+            bottomCircles.children[0].classList.add("slider-bottom-circle-selected")
+            bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
+            bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
+        } else if (scrollX >= maxScrolLX) {
+            bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
+            bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
+            bottomCircles.children[2].classList.add("slider-bottom-circle-selected")
+        } else {
+            bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
+            bottomCircles.children[1].classList.add("slider-bottom-circle-selected")
+            bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
+        }
+    }, 250)
+})
 
 
 // Initializes the slider 
