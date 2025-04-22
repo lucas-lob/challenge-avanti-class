@@ -81,8 +81,18 @@ header div.top-bar-input button {
     transition: all ease-in-out 0.25s;
 }
 
-header div.top-bar-input button:hover {
-    color: var(--primaryColor);
+header div.top-search-bar-result p {
+    font-size: 14px;
+    color: var(--redColor);
+    margin-bottom: min(0.7vw, 15px);
+}
+
+header div.top-search-bar-result {
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
 }
 
 header div nav li {
@@ -527,12 +537,6 @@ footer p.footer-text::after {
     max-width: 152px;
 }
 
-.top-search-bar-result {
-    font-size: 14px;
-    color: var(--redColor);
-    margin-bottom: min(0.7vw, 15px);
-}
-
 .top-bar-margin {
     padding: 16px;
 }
@@ -691,7 +695,7 @@ footer p.footer-text::after {
     }
 
     header div.desktop {
-        display: block;
+        display: flex;
     }
 
     header div.mobile {
@@ -712,6 +716,19 @@ footer p.footer-text::after {
 
     header nav ul img {
         margin-right: 4px;
+    }
+
+    header div.top-search-bar-result {
+        position: absolute;
+        margin-left: min(66px, 3.5vw);
+        top: 110%;
+        width: calc(24px + min(594px, 34vw));
+        background-color: #FFF;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
+    }
+
+    header div.top-bar-input button:hover {
+        color: var(--primaryColor);
     }
 
     header nav.hamburguer-menu-items ul>li:first-child p {
