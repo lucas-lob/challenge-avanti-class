@@ -141,7 +141,9 @@ cardsInfos.map((card) => {
                                 </div>
         
                                 <div class="display-flex justify-content-center">
-                                    <input class="launch-nav-input-submit" type="button" title="Comprar" value="Comprar">
+                                    <a class="launch-nav-input-submit" href="${card.linkUrl}">
+                                        <button type="button">Comprar</button>
+                                    </a>
                                 </div>
         
                             </div>
