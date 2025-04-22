@@ -195,9 +195,7 @@ slider.addEventListener("touchmove", () => {
 
 
 // Initializes the slider 
-if (screenSize > sliderSettings.smallTabletMinScreenSize) {
-    createArrowButtons()
-}
+createArrowButtons()
 startCardsPosition()
 updateScreenSizeInfos()
 
