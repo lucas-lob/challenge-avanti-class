@@ -24,16 +24,30 @@ function updateBottomButtons() {
 }
 
 function sliderRightMoviment() {
-    for (let i = 0; i <= lastIndex; i++) {
-        cardTranslate[i] = cardTranslate[i] + 1
-        cardsDiv.children[i].style.transform = `translateX(calc(${cardTranslate[i]} * (-100% - 10px)))`
+    firstCardVisible++
+    lastCardVisible++
+
+    try {
+        cardsDiv.children[lastCardVisible - 1].scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        })
+    } catch {
+        firstCardVisible--
+        lastCardVisible--
     }
 }
 
 function sliderLeftMoviment() {
-    for (let i = 0; i <= lastIndex; i++) {
-        cardTranslate[i] = cardTranslate[i] - 1
-        cardsDiv.children[i].style.transform = `translateX(calc(${cardTranslate[i]} * (-100% - 10px)))`
+    if(firstCardVisible > 1){
+        firstCardVisible--
+        lastCardVisible--
+
+        cardsDiv.children[firstCardVisible - 1].scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        })
+
     }
 }
 
@@ -48,8 +62,6 @@ function createArrowButtons() {
                 ${oldHTML}
     `
 
-
-
     // Left button function
     const leftBtn = document.querySelector(`div.${sliderSettings.buttonsClass} button:nth-child(1)`)
 
@@ -57,12 +69,8 @@ function createArrowButtons() {
         clearTimeout(sliderMovementTimeout)
 
         sliderMovementTimeout = setTimeout(() => {
-            if (firstIndex > 0) {
-                sliderLeftMoviment()
-                firstIndex--
-                lastIndex--
-                updateBottomButtons()
-            }
+            sliderLeftMoviment()
+            updateBottomButtons()
         }, 200)
     })
 
@@ -75,12 +83,10 @@ function createArrowButtons() {
         clearTimeout(sliderMovementTimeout)
 
         sliderMovementTimeout = setTimeout(() => {
-            if (lastIndex < cardsDiv.childElementCount - 1) {
-                firstIndex++
-                lastIndex++
-                sliderRightMoviment()
-                updateBottomButtons()
-            }
+            firstIndex++
+            lastIndex++
+            sliderRightMoviment()
+            updateBottomButtons()
         }, 200)
     })
 }
@@ -89,19 +95,38 @@ function updateArrowButtons() {
     arrowButtons = document.querySelectorAll(`div.${sliderSettings.buttonsClass}`)
 
     // If desktop screen size
-    if(screenSize > sliderSettings.smallTabletMinScreenSize){
+    if (screenSize > sliderSettings.smallTabletMinScreenSize) {
         // If exists no arrow buttons
-        if(arrowButtons.length === 0){
+        if (arrowButtons.length === 0) {
             createArrowButtons()
         }
     }
     // If mobile screen size
     else {
         // If exists arrow buttons
-        if(arrowButtons.length !== 0){
+        if (arrowButtons.length !== 0) {
             arrowButtons[0].remove()
         }
     }
+}
+
+function getLastCardVisible() {
+    if(screenSize > sliderSettings.desktopMinScreenSize){
+        return 5
+    } else if (screenSize > sliderSettings.bigTabletMinScreenSize){
+        return 4
+    } else if (screenSize > sliderSettings.smallTabletMinScreenSize){
+        return 3
+    } else {
+        return 2
+    }
+}
+
+function resizeSlider() {
+    cardsDiv.children[lastCardVisible - 1].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    })
 }
 
 
@@ -126,9 +151,16 @@ let cardsDiv = document.getElementById(sliderSettings.divCardsID)
 let firstIndex = 0
 let lastIndex = 0
 let displayedCards = 0
+
 let screenSize = window.innerWidth
+
 let screenResizeTimeout = 0
 let sliderMovementTimeout = 0
+
+let firstCardVisible = 1
+let lastCardVisible = getLastCardVisible()
+
+
 
 cardTranslate = {}
 for (let i = 0; i < cardsDiv.childElementCount; i++) {
@@ -151,21 +183,20 @@ let bottomCircles = document.querySelector(`div.${sliderSettings.bottomCirclesCl
 
 
 // Initializes the slider 
-if(screenSize > sliderSettings.smallTabletMinScreenSize){
+if (screenSize > sliderSettings.smallTabletMinScreenSize) {
     createArrowButtons()
 }
 startCardsPosition()
 
 
 
-// Hides all undisplayed cards in screen resize
+// Update slider in screen resizing
 window.addEventListener("resize", () => {
     clearTimeout(screenResizeTimeout)
 
     screenResizeTimeout = setTimeout(() => {
         screenSize = window.innerWidth
         updateArrowButtons()
-        startCardsPosition()
     }, 50)
 })
 
