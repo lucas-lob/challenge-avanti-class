@@ -1,56 +1,10 @@
-function resetCards() {
+function startCardsPosition() {
     cardsDiv = document.getElementById(sliderSettings.divCardsID)
     bottomCircles = document.querySelector(`div.${sliderSettings.bottomCirclesClass}`)
 
-    for (let i = 0; i < cardsDiv.childElementCount; i++) {
-        cardTranslate[i] = 0
-        cardsDiv.children[i].classList = sliderSettings.cardsClass
-        cardsDiv.children[i].style.transform = ""
-
-        if (i > lastIndex) {
-            cardsDiv.children[i].classList.add(`width-${displayedCards}`)
-            cardsDiv.children[i].classList.add("undisplayed-card")
-            cardsDiv.children[i].classList.add("to-right")
-        }
+    for (let i = 1; i < cardsDiv.childElementCount; i++) {
+        cardsDiv.children[i].style.transform = `translate(calc((${i} * 100%) + (${i} * 10px)))`
     }
-}
-
-function responsiveResetCards() {
-    if (screenSize > sliderSettings.desktopMinScreenSize) {
-        if (displayedCards !== 5) {
-            displayedCards = 5
-            firstIndex = 0
-            lastIndex = 4
-
-            resetCards()
-        }
-    } else if (screenSize > sliderSettings.bigTabletMinScreenSize) {
-        if (displayedCards !== 4) {
-            displayedCards = 4
-            firstIndex = 0
-            lastIndex = 3
-
-            resetCards()
-        }
-    } else if (screenSize > sliderSettings.smallTabletMinScreenSize) {
-        if (displayedCards !== 3) {
-            displayedCards = 3
-            firstIndex = 0
-            lastIndex = 2
-
-            resetCards()
-        }
-    } else {
-        if (displayedCards !== 2) {
-            displayedCards = 2
-            firstIndex = 0
-            lastIndex = 1
-
-            resetCards()
-        }
-    }
-
-    updateBottomButtons()
 }
 
 function updateBottomButtons() {
@@ -200,7 +154,7 @@ let bottomCircles = document.querySelector(`div.${sliderSettings.bottomCirclesCl
 if(screenSize > sliderSettings.smallTabletMinScreenSize){
     createArrowButtons()
 }
-responsiveResetCards()
+startCardsPosition()
 
 
 
@@ -211,7 +165,7 @@ window.addEventListener("resize", () => {
     screenResizeTimeout = setTimeout(() => {
         screenSize = window.innerWidth
         updateArrowButtons()
-        responsiveResetCards()
+        startCardsPosition()
     }, 50)
 })
 

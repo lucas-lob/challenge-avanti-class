@@ -162,20 +162,6 @@ main nav.no-mobile {
     display: none;
 }
 
-main nav div.top-slider-cards {
-    position: relative;
-    overflow: hidden;
-    gap: 10px;
-}
-
-main nav div.top-slider-card {
-    background-color: #FFF;
-    border: 1.5px solid #DDDDDD;
-    border-radius: 10px;
-    padding: 12px 8px;
-    transition: all ease-in-out 0.5s;
-}
-
 main nav div.top-slider-card a {
     position: relative;
 }
