@@ -28,6 +28,7 @@ function sliderRightMoviment() {
     lastCardVisible++
 
     try {
+        
         cardsDiv.children[lastCardVisible - 1].scrollIntoView({
             behavior: "smooth",
             block: "nearest"
@@ -39,7 +40,7 @@ function sliderRightMoviment() {
 }
 
 function sliderLeftMoviment() {
-    if(firstCardVisible > 1){
+    if (firstCardVisible > 1) {
         firstCardVisible--
         lastCardVisible--
 
@@ -110,24 +111,38 @@ function updateArrowButtons() {
     }
 }
 
-function getLastCardVisible() {
-    if(screenSize > sliderSettings.desktopMinScreenSize){
-        return 5
-    } else if (screenSize > sliderSettings.bigTabletMinScreenSize){
-        return 4
-    } else if (screenSize > sliderSettings.smallTabletMinScreenSize){
-        return 3
+function updateScreenSizeInfos() {
+    if (screenSize > sliderSettings.desktopMinScreenSize) {
+        screenSizeDesktop = true
+        screenSizeBigTablet = false
+        screenSizeSmallTablet = false
+
+        firstCardVisible = 1
+        lastCardVisible = 5
+    } else if (screenSize > sliderSettings.bigTabletMinScreenSize) {
+        screenSizeDesktop = false
+        screenSizeBigTablet = true
+        screenSizeSmallTablet = false
+
+        firstCardVisible = 1
+        lastCardVisible = 4
+    } else if (screenSize > sliderSettings.smallTabletMinScreenSize) {
+        screenSizeDesktop = false
+        screenSizeBigTablet = false
+        screenSizeSmallTablet = true
+
+        firstCardVisible = 1
+        lastCardVisible = 3
     } else {
-        return 2
+        screenSizeDesktop = false
+        screenSizeBigTablet = false
+        screenSizeSmallTablet = false
+
+        firstCardVisible = 1
+        lastCardVisible = 2
     }
 }
 
-function resizeSlider() {
-    cardsDiv.children[lastCardVisible - 1].scrollIntoView({
-        behavior: "smooth",
-        block: "nearest"
-    })
-}
 
 
 // Settings of the slider
@@ -158,7 +173,7 @@ let screenResizeTimeout = 0
 let sliderMovementTimeout = 0
 
 let firstCardVisible = 1
-let lastCardVisible = getLastCardVisible()
+let lastCardVisible = 0
 
 
 
@@ -187,7 +202,7 @@ if (screenSize > sliderSettings.smallTabletMinScreenSize) {
     createArrowButtons()
 }
 startCardsPosition()
-
+updateScreenSizeInfos()
 
 
 // Update slider in screen resizing
@@ -197,6 +212,12 @@ window.addEventListener("resize", () => {
     screenResizeTimeout = setTimeout(() => {
         screenSize = window.innerWidth
         updateArrowButtons()
+        updateScreenSizeInfos()
+
+        cardsDiv.children[0].scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        })
     }, 50)
 })
 
