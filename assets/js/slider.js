@@ -131,6 +131,25 @@ function createArrowButtons() {
     })
 }
 
+function updateArrowButtons() {
+    arrowButtons = document.querySelectorAll(`div.${sliderSettings.buttonsClass}`)
+
+    // If desktop screen size
+    if(screenSize > sliderSettings.smallTabletMinScreenSize){
+        // If exists no arrow buttons
+        if(arrowButtons.length === 0){
+            createArrowButtons()
+        }
+    }
+    // If mobile screen size
+    else {
+        // If exists arrow buttons
+        if(arrowButtons.length !== 0){
+            arrowButtons[0].remove()
+        }
+    }
+}
+
 
 // Settings of the slider
 sliderSettings = {
@@ -191,6 +210,7 @@ window.addEventListener("resize", () => {
 
     screenResizeTimeout = setTimeout(() => {
         screenSize = window.innerWidth
+        updateArrowButtons()
         responsiveResetCards()
     }, 50)
 })
