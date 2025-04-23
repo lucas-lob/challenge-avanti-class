@@ -6,54 +6,21 @@ function resetMobileMenuHamburguerStyles() {
 }
 
 // Global variables
-const body = document.querySelector("body")
-const showMobileHamburguerMenuBtn = document.querySelector("header div.mobile button#show-hamburguer-menu-button")
-const mobileHamburguerMenu = document.querySelector("header div.mobile div#hamburguer-menu")
-
-let openingTimeout = 0
+const showMobileHamburguerMenuBtn = document.getElementById("mobile-hamburguer-menu-show-button")
+const closeMobileHmaburguerMenuBtn = document.getElementById("mobile-hamburguer-menu-close-button")
+const mobileHamburguerMenu = document.getElementById("mobile-hamburguer-menu")
 
 // Adds events listeners for open/close the menu hamburguer
-mobileHamburguerMenu.addEventListener("click", () => {
-    setTimeout(() => {
-        clearTimeout(openingTimeout)
-    }, 10)
-})
-
 showMobileHamburguerMenuBtn.addEventListener("click", () => {
-    setTimeout(() => {
-        if(!mobileHamburguerMenu.classList.contains("displayed-hamburguer-menu")){
-            clearTimeout(openingTimeout)
-
-            mobileHamburguerMenu.classList.add("displayed-hamburguer-menu")
-
-            setTimeout(() => {
-                mobileHamburguerMenu.classList.add("fullsize")
-                mobileHamburguerMenu.classList.remove("nosize")
-                departmentsMobileHmaburguerMenuItems[0].classList.toggle("hover-bold")
-                departmentsMobileHmaburguerMenuItems[0].classList.toggle("hover-color")
-            }, 10)
-        } else {
-            mobileHamburguerMenu.classList.remove("fullsize")
-            mobileHamburguerMenu.classList.add("nosize")
-
-            clearTimeout(openingTimeout)
-    
-            setTimeout(() => {
-                mobileHamburguerMenu.classList.add("hidden")
-                mobileHamburguerMenu.classList.remove("show")
-            }, 200)
-        }
-    }, 10)
+    if (!mobileHamburguerMenu.classList.contains("displayed-hamburguer-menu")) {
+        mobileHamburguerMenu.classList.add("displayed-hamburguer-menu")
+    } else {
+        mobileHamburguerMenu.classList.remove("displayed-hamburguer-menu")
+    }
 })
 
-body.addEventListener("click", () => {
-    openingTimeout = setTimeout(() => {
-        if (mobileHamburguerMenu.classList.contains("displayed-hamburguer-menu")) {
-            mobileHamburguerMenu.classList.remove("displayed-hamburguer-menu")
-
-            resetMobileMenuHamburguerStyles()
-        }
-    }, 100)
+closeMobileHmaburguerMenuBtn.addEventListener("click", () => {
+    mobileHamburguerMenu.classList.remove("displayed-hamburguer-menu")
 })
 
 

@@ -3,16 +3,16 @@
 header div.hamburguer-menu-container {
     position: absolute;
     left: 0;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     z-index: 1;
     border-radius: 0 20px 20px 0;
     background-color: #FFF;
+    transition: all ease-in-out 0.4s;
 }
 
 header div.hamburguer-menu {
     max-height: 329px;
     padding-bottom: 20px;
-    transition: all ease-in-out 0.4s;
 }
 
 header div.hamburguer-menu-container button.hamburguer-menu-close-button {
