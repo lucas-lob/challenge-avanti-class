@@ -206,11 +206,6 @@
             screenSize = window.innerWidth
             updateScreenSizeInfos()
             updateBottomButtons()
-
-            cardsDiv.children[0].scrollIntoView({
-                behavior: "smooth",
-                block: "nearest"
-            })
         }, 50)
     })
 }
