@@ -482,6 +482,10 @@ footer p.footer-text::after {
     justify-content: right;
 }
 
+.justify-content-end {
+    justify-content: end;
+}
+
 .none {
     display: none;
 }

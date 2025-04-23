@@ -34,7 +34,6 @@ header div.hamburguer-menu {
 header div.hamburguer-menu-container button.hamburguer-menu-close-button {
     background: none;
     border: none;
-    width: 100%;
     padding: 10px 10px 5px;
     text-align: end;
     transition: all ease-in-out 0.25s;
