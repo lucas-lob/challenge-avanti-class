@@ -17,6 +17,7 @@ header nav.hamburguer-menu-departments {
     padding: 15px;
     overflow: auto;
     background-color: var(--gray4);
+    scroll-snap-type: y mandatory;
 }
 
 header nav.hamburguer-menu-departments::-webkit-scrollbar {
@@ -39,6 +40,7 @@ header nav.hamburguer-menu-departments::-webkit-scrollbar-thumb:hover {
 }
 
 header nav.hamburguer-menu-departments li {
+    scroll-snap-align: end;
     gap: 30px;
 }
 
@@ -46,6 +48,18 @@ header nav.hamburguer-menu-categories {
     padding: 15px;
     background-color: #FFF;
     overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+header nav.hamburguer-menu-categories {
+    padding: 15px;
+    background-color: #FFF;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+header nav.hamburguer-menu-categories li {
+    scroll-snap-align: end;
 }
 
 header nav.hamburguer-menu-categories::-webkit-scrollbar {
