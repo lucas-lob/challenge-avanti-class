@@ -56,6 +56,7 @@
 .anouncemment-slider-bottom-circles span {
     font-size: 0.6rem;
     color: var(--gray1);
+    transition: font-size ease-in-out 0.2s;
 }
 
 .anouncemment-slider-bottom-circles span.anouncemment-slide-selected {
