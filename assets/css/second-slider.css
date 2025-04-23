@@ -1,0 +1,86 @@
+@import url(colors.css);
+
+
+/* ARROWS BUTTONS */
+.arrow-button {
+    display: none;
+}
+
+@media (min-width: 820px){
+    .arrow-button {
+        display: flex;
+    }
+}
+
+
+
+/* CARDS SETTINGS */
+.bottom-slider-cards {
+    position: relative;
+    overflow: scroll;
+    scrollbar-width: none;
+    gap: 10px;
+}
+
+.bottom-slider-cards::-webkit-scrollbar {
+    display: none;
+}
+
+
+.bottom-slider-cards > :first-child {
+    position: relative;
+}
+
+.bottom-slider-card {
+    position: absolute;
+    width: calc((100% - 10px - 2 * 16px) / 2 - 2px);
+    background-color: #FFF;
+    border: 1.5px solid #DDDDDD;
+    border-radius: 10px;
+    padding: 12px 8px;
+    transition: all ease-in-out 0.5s;
+}
+
+@media (min-width: 820px){
+    .bottom-slider-card {
+        width: calc((100% - 20px - 3 * 16px) / 3 - 2px);
+    }
+}
+
+@media (min-width: 1100px){
+    .bottom-slider-card {
+        width: calc((100% - 30px - 4 * 16px) / 4 - 2px);
+    }
+}
+
+@media (min-width: 1360px){
+    .bottom-slider-card {
+        width: calc((100% - 40px - 5 * 16px) / 5 - 2px);
+    }
+}
+
+
+
+/* BOTTOM BUTTONS */
+.bottom-slider-bottom-circles {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 16px;
+    align-items: center;
+}
+
+.bottom-slider-bottom-circles span {
+    font-size: 8px;
+    color: var(--gray1);
+    transition: all ease-in-out 0.25s;
+    cursor: default;
+}
+
+.bottom-slider-bottom-circle-selected {
+    font-size: 10px !important;
+    color: var(--gray0) !important;
+}
+
+
+
