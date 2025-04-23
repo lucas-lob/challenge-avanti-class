@@ -40,6 +40,7 @@
     border-radius: 10px;
     padding: 12px 8px;
     transition: all ease-in-out 0.5s;
+    scroll-snap-align: start;
 }
 
 @media (min-width: 820px){
