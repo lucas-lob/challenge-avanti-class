@@ -1,0 +1,41 @@
+@media (min-width:760px) {
+    .container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .small-container {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width:960px) {
+    .container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .small-container {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width:1360px) {
+    .container {
+        width: min(65.5vw, 1288px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .small-container {
+        width: min(65.5vw, 1177px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

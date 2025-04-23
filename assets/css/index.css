@@ -1067,22 +1067,6 @@ footer p.footer-text::after {
 
 
 
-    /* CONTAINERS */
-    .container {
-        width: clamp(16px, 65.5vw, 1288px);
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .small-container {
-        width: clamp(16px, 65.5vw, 1177px);
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-
-
-
     /* HEADER */
     .avanti-logo {
         width: 10vw;
