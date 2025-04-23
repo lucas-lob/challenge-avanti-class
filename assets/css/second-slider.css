@@ -43,23 +43,23 @@
     scroll-snap-align: start;
 }
 
-@media (min-width: 820px){
-    .bottom-slider-cards {
-        pointer-events: none;
-    }
-
+@media (min-width: 460px){
     .bottom-slider-card {
         width: calc((100% - 20px - 3 * 16px) / 3 - 2px);
     }
 }
 
-@media (min-width: 1100px){
+@media (min-width: 760px){
+    .bottom-slider-cards {
+        pointer-events: none;
+    }
+    
     .bottom-slider-card {
         width: calc((100% - 30px - 4 * 16px) / 4 - 2px);
     }
 }
 
-@media (min-width: 1360px){
+@media (min-width: 1260px){
     .bottom-slider-card {
         width: calc((100% - 40px - 5 * 16px) / 5 - 2px);
     }

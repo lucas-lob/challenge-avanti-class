@@ -1074,7 +1074,7 @@ footer p.footer-text::after {
 
     /* HEADER */
     .avanti-logo {
-        width: 10vw;
+        width: clamp(130px, 10vw, 152px);
     }
 
     .top-descount-announcement-padding {
@@ -1153,11 +1153,11 @@ footer p.footer-text::after {
     }
 
     .banner-text-width {
-        width: 25.36vw;
+        width: 50%;
     }
 
     .banner-image-padding {
-        padding: 5.6vw 3.3vw;
+        padding: 0;
     }
 
 
@@ -1188,7 +1188,7 @@ footer p.footer-text::after {
     }
 
     .newletter-form-input-submit {
-        width: 6.66vw;
+        width: 121px;
         height: 48px;
         padding: 0.7vw;
         background-color: var(--primaryColor);
@@ -1232,6 +1232,10 @@ footer p.footer-text::after {
         margin-right: 11.6vw;
     }
 
+    .banner-image-padding {
+        padding: min(5.6vw, 109px) min(3.3vw, 64px);
+    }
+
 }
 
 @media (min-width:1360px){
@@ -1243,4 +1247,7 @@ footer p.footer-text::after {
         margin-right: 3.6vw;
     }
 
+    .banner-text-width {
+        width: 25.36vw;
+    }
 }
