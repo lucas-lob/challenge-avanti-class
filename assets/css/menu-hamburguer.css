@@ -1,15 +1,26 @@
 @import url(colors.css);
 
-header div.hamburguer-menu {
+header div.hamburguer-menu-container {
     position: absolute;
     left: 0;
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
     z-index: 1;
-    max-height: 329px;
-    background-color: #FFF;
     border-radius: 0 20px 20px 0;
-    padding: 20px 0;
+    background-color: #FFF;
+}
+
+header div.hamburguer-menu {
+    max-height: 329px;
+    padding-bottom: 20px;
     transition: all ease-in-out 0.4s;
+}
+
+header div.hamburguer-menu-container button.hamburguer-menu-close-button {
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 10px 10px 5px;
+    text-align: end;
 }
 
 header div.hamburguer-menu ul {
