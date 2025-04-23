@@ -39,30 +39,26 @@
     }
 
     function sliderRightMoviment() {
-        firstCardVisible++
-        lastCardVisible++
+        firstCardPosition = cardsDiv.children[0].getBoundingClientRect().x
+        lastCardPosition = cardsDiv.children[cardsDiv.childElementCount - 1].getBoundingClientRect().x
 
-        try {
-            cardsDiv.children[lastCardVisible - 1].scrollIntoView({
-                behavior: "smooth",
-                block: "nearest"
+        if (lastCardPosition > containerEndPosition) {
+            cardsDiv.scrollBy({
+                left: cardsDiv.children[0].getBoundingClientRect().width,
+                behavior: "smooth"
             })
-        } catch {
-            firstCardVisible--
-            lastCardVisible--
         }
     }
 
     function sliderLeftMoviment() {
-        if (firstCardVisible > 1) {
-            firstCardVisible--
-            lastCardVisible--
+        firstCardPosition = cardsDiv.children[0].getBoundingClientRect().x
+        lastCardPosition = cardsDiv.children[cardsDiv.childElementCount - 1].getBoundingClientRect().x
 
-            cardsDiv.children[firstCardVisible - 1].scrollIntoView({
-                behavior: "smooth",
-                block: "nearest"
+        if (firstCardPosition < containerStartPosition) {
+            cardsDiv.scrollBy({
+                left: -cardsDiv.children[0].getBoundingClientRect().width,
+                behavior: "smooth"
             })
-
         }
     }
 
@@ -106,38 +102,6 @@
         })
     }
 
-    function updateScreenSizeInfos() {
-        if (screenSize > sliderSettings.desktopMinScreenSize) {
-            screenSizeDesktop = true
-            screenSizeBigTablet = false
-            screenSizeSmallTablet = false
-
-            firstCardVisible = 1
-            lastCardVisible = 5
-        } else if (screenSize > sliderSettings.bigTabletMinScreenSize) {
-            screenSizeDesktop = false
-            screenSizeBigTablet = true
-            screenSizeSmallTablet = false
-
-            firstCardVisible = 1
-            lastCardVisible = 4
-        } else if (screenSize > sliderSettings.smallTabletMinScreenSize) {
-            screenSizeDesktop = false
-            screenSizeBigTablet = false
-            screenSizeSmallTablet = true
-
-            firstCardVisible = 1
-            lastCardVisible = 3
-        } else {
-            screenSizeDesktop = false
-            screenSizeBigTablet = false
-            screenSizeSmallTablet = false
-
-            firstCardVisible = 1
-            lastCardVisible = 2
-        }
-    }
-
 
 
     // Settings of the slider
@@ -168,8 +132,11 @@
     let sliderMovementTimeout = 0
     let touchTimeout = 0
 
-    let firstCardVisible = 1
-    let lastCardVisible = 0
+    let firstCardPosition = 0
+    let lastCardPosition = 0
+
+    let = containerStartPosition = cardsDiv.getBoundingClientRect().x
+    let = containerEndPosition = cardsDiv.getBoundingClientRect().x + cardsDiv.getBoundingClientRect().width
 
 
 
@@ -189,7 +156,6 @@
     // Initializes the slider 
     createArrowButtons()
     startCardsPosition()
-    updateScreenSizeInfos()
 
 
     // Update slider in screen resizing
@@ -198,8 +164,11 @@
 
         screenResizeTimeout = setTimeout(() => {
             screenSize = window.innerWidth
-            updateScreenSizeInfos()
-            updateBottomButtons()
+
+            containerStartPosition = cardsDiv.getBoundingClientRect().x
+            containerEndPosition = cardsDiv.getBoundingClientRect().x + cardsDiv.getBoundingClientRect().width
+
+            updateBottomButtons("touch")
         }, 50)
     })
 }
