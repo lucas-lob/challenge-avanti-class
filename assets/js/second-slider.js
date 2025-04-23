@@ -128,9 +128,9 @@
 
     // Settings of the slider
     sliderSettings = {
-        sliderID: "top-slider",
-        divCardsID: "top-slider-cards",
-        cardsClass: "top-slider-card",
+        sliderID: "bottom-slider",
+        divCardsID: "bottom-slider-cards",
+        cardsClass: "bottom-slider-card",
         buttonsClass: "slider-buttons",
         bottomCirclesClass: "slider-bottom-circles",
         desktopMinScreenSize: 1360,

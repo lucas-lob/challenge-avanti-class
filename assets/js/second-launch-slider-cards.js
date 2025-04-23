@@ -99,8 +99,8 @@
 
     // Settings of the cards
     const cardsSettings = {
-        divCardsID: "top-slider-cards",
-        cardsClass: "top-slider-card",
+        divCardsID: "bottom-slider-cards",
+        cardsClass: "bottom-slider-card",
     }
 
 
@@ -152,6 +152,4 @@
         `
     })
 }
-
-
 
