@@ -58,7 +58,7 @@
     color: var(--gray1);
 }
 
-.anouncemment-slider-bottom-circles span.anouncemment-slider-bottom-selected-circle {
+.anouncemment-slider-bottom-circles span.anouncemment-slide-selected {
     font-size: 0.7rem;
     color: var(--gray0);
 }
