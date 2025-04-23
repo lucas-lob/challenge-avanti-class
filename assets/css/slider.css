@@ -18,6 +18,7 @@
 .top-slider-cards {
     position: relative;
     overflow: scroll;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
     gap: 10px;
 }
@@ -39,9 +40,14 @@
     border-radius: 10px;
     padding: 12px 8px;
     transition: all ease-in-out 0.5s;
+    scroll-snap-align: start;
 }
 
 @media (min-width: 820px){
+    .top-slider-cards {
+        pointer-events: none;
+    }
+
     .top-slider-card {
         width: calc((100% - 20px - 3 * 16px) / 3 - 2px);
     }

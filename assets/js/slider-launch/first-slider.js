@@ -8,20 +8,34 @@
         }
     }
 
-    function updateBottomButtons() {
-        if (firstCardVisible === 1) {
-            bottomCircles.children[0].classList.add("slider-bottom-circle-selected")
-            bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
-            bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
-        } else if (lastCardVisible === cardsDiv.childElementCount) {
-            bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
-            bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
-            bottomCircles.children[2].classList.add("slider-bottom-circle-selected")
+    function updateBottomButtons(version) {
+        let delay = 0
+        if(version === "touch"){
+            delay = 500
         } else {
-            bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
-            bottomCircles.children[1].classList.add("slider-bottom-circle-selected")
-            bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
+            delay = 300
         }
+
+        setTimeout(() => {
+            let firstCardPosition = cardsDiv.children[0].getBoundingClientRect().x
+            let lastCardPosition = cardsDiv.children[cardsDiv.childElementCount - 1].getBoundingClientRect().x
+            let containerStartPosition = cardsDiv.getBoundingClientRect().x
+            let containerEndPosition = cardsDiv.getBoundingClientRect().x + cardsDiv.getBoundingClientRect().width
+
+            if (firstCardPosition >= containerStartPosition) {
+                bottomCircles.children[0].classList.add("slider-bottom-circle-selected")
+                bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
+                bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
+            } else if (lastCardPosition <= containerEndPosition) {
+                bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
+                bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
+                bottomCircles.children[2].classList.add("slider-bottom-circle-selected")
+            } else {
+                bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
+                bottomCircles.children[1].classList.add("slider-bottom-circle-selected")
+                bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
+            }
+        }, delay)
     }
 
     function sliderRightMoviment() {
@@ -71,7 +85,7 @@
 
             sliderMovementTimeout = setTimeout(() => {
                 sliderLeftMoviment()
-                updateBottomButtons()
+                updateBottomButtons("click")
             }, 200)
         })
 
@@ -87,7 +101,7 @@
                 firstIndex++
                 lastIndex++
                 sliderRightMoviment()
-                updateBottomButtons()
+                updateBottomButtons("click")
             }, 200)
         })
     }
@@ -173,25 +187,8 @@
 
 
     // Adds touch screen event to change bottom circles in mobile devices
-    slider.addEventListener("touchmove", () => {
-        clearTimeout(touchTimeout)
-        touchTimeout = setTimeout(() => {
-            let scrollX = cardsDiv.scrollLeft
-            let maxScrolLX = cardsDiv.scrollWidth - cardsDiv.getBoundingClientRect().width - 10
-            if (scrollX === 0) {
-                bottomCircles.children[0].classList.add("slider-bottom-circle-selected")
-                bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
-                bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
-            } else if (scrollX >= maxScrolLX) {
-                bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
-                bottomCircles.children[1].classList.remove("slider-bottom-circle-selected")
-                bottomCircles.children[2].classList.add("slider-bottom-circle-selected")
-            } else {
-                bottomCircles.children[0].classList.remove("slider-bottom-circle-selected")
-                bottomCircles.children[1].classList.add("slider-bottom-circle-selected")
-                bottomCircles.children[2].classList.remove("slider-bottom-circle-selected")
-            }
-        }, 250)
+    slider.addEventListener("touchend", () => {
+        updateBottomButtons("touch")
     })
 
 

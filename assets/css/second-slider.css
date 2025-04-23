@@ -18,6 +18,7 @@
 .bottom-slider-cards {
     position: relative;
     overflow: scroll;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
     gap: 10px;
 }
@@ -42,6 +43,10 @@
 }
 
 @media (min-width: 820px){
+    .bottom-slider-cards {
+        pointer-events: none;
+    }
+
     .bottom-slider-card {
         width: calc((100% - 20px - 3 * 16px) / 3 - 2px);
     }
