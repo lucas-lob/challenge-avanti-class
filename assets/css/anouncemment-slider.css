@@ -1,4 +1,6 @@
+/* SLIDER */
 .anouncemment-slider-container {
+    position: relative;
     width: 100%;
     height: 306px;
 }
@@ -37,4 +39,26 @@
 #anouncemment-slide3 {
     width: 100%;
     left: 200%;
+}
+
+
+
+/* BOTTOM CIRCLES */
+.anouncemment-slider-bottom-circles {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -180%);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.anouncemment-slider-bottom-circles span {
+    font-size: 0.6rem;
+    color: var(--gray1);
+}
+
+.anouncemment-slider-bottom-circles span.anouncemment-slider-bottom-selected-circle {
+    font-size: 0.7rem;
+    color: var(--gray0);
 }
