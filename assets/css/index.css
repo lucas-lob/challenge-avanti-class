@@ -602,7 +602,7 @@ footer p.footer-text::after {
     border: 1px solid var(--inputTextBorderColor);
     border-radius: 10px;
     padding-left: 19px;
-    transition: all ease-in-out 0.25s;
+    transition: border-color ease-in-out 0.25s;
     outline: none;
 }
 
@@ -826,7 +826,7 @@ footer p.footer-text::after {
     main div.anouncemment-img {
         height: 100%;
         position: absolute;
-        left: 10.4vw;
+        left: 8.4vw;
     }
 
     main img.anouncemment-img {
@@ -838,7 +838,7 @@ footer p.footer-text::after {
 
     main div.anouncemment-text {
         gap: 10px;
-        margin-right: 17.6vw;
+        margin-right: 12.6vw;
     }
 
     main div.supersale {
@@ -1101,7 +1101,7 @@ footer p.footer-text::after {
         border-radius: 10px;
         padding-left: 24px;
         margin-left: min(66px, 3.5vw);
-        transition: all ease-in-out 0.25s;
+        transition: border-color ease-in-out 0.25s;
         outline: none;
     }
 
@@ -1225,11 +1225,11 @@ footer p.footer-text::after {
 
 @media (min-width:960px){
     main div.anouncemment-img {
-        left: 4.4vw;
+        left: 7.4vw;
     }
 
     main div.anouncemment-text {
-        margin-right: 7.6vw;
+        margin-right: 11.6vw;
     }
 
 }
