@@ -1,5 +1,16 @@
 @import url(colors.css);
 
+header div.mobile button.mobile-hamburguer-menu-show-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+}
+
+header div.mobile button.mobile-hamburguer-menu-show-button span {
+    font-size: 2.3rem;
+}
+
 header div.hamburguer-menu-container {
     position: absolute;
     left: 0;
