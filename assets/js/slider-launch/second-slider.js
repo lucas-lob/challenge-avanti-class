@@ -186,12 +186,6 @@
 
 
 
-    // Adds touch screen event to change bottom circles in mobile devices
-    slider.addEventListener("touchend", () => {
-        updateBottomButtons("touch")
-    })
-
-
     // Initializes the slider 
     createArrowButtons()
     startCardsPosition()
