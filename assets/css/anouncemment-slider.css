@@ -1,0 +1,30 @@
+.anouncemment-slider-container {
+    width: 100%;
+    height: 306px;
+}
+
+.anouncemment-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.anouncemment-slide {
+    position: absolute;
+    display: flex;
+}
+
+#anouncemment-slide1 {
+    width: 100%;
+    left: 0;
+}
+
+#anouncemment-slide2 {
+    width: 100%;
+    left: 100%;
+}
+
+#anouncemment-slide3 {
+    width: 100%;
+    left: 200%;
+}

@@ -120,6 +120,10 @@ header span.descount-price {
     padding: 0 5px;
 }
 
+main div.anouncemment {
+    display: none;
+}
+
 main img.anouncemment-img {
     content: url(../images/body/anouncemment-img-mobile.png);
     width: 225px;
@@ -801,8 +805,13 @@ footer p.footer-text::after {
     }
 
     main div.anouncemment {
+        display: flex;
         position: relative;
         height: min(26.5vw, 510px);
+    }
+
+    main div.anouncemment-slider-container {
+        display: none;
     }
 
     main div.anouncemment-img {
