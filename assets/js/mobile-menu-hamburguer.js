@@ -21,12 +21,11 @@ mobileHamburguerMenu.addEventListener("click", () => {
 
 showMobileHamburguerMenuBtn.addEventListener("click", () => {
     setTimeout(() => {
-        if(mobileHamburguerMenu.classList.contains("hidden")){
-            mobileHamburguerMenu.classList.remove("hidden")
-            mobileHamburguerMenu.classList.add("show")
-
+        if(!mobileHamburguerMenu.classList.contains("displayed-hamburguer-menu")){
             clearTimeout(openingTimeout)
-    
+
+            mobileHamburguerMenu.classList.add("displayed-hamburguer-menu")
+
             setTimeout(() => {
                 mobileHamburguerMenu.classList.add("fullsize")
                 mobileHamburguerMenu.classList.remove("nosize")
@@ -49,16 +48,10 @@ showMobileHamburguerMenuBtn.addEventListener("click", () => {
 
 body.addEventListener("click", () => {
     openingTimeout = setTimeout(() => {
-        if (mobileHamburguerMenu.classList.contains("show")) {
-            mobileHamburguerMenu.classList.remove("fullsize")
-            mobileHamburguerMenu.classList.add("nosize")
+        if (mobileHamburguerMenu.classList.contains("displayed-hamburguer-menu")) {
+            mobileHamburguerMenu.classList.remove("displayed-hamburguer-menu")
 
             resetMobileMenuHamburguerStyles()
-
-            setTimeout(() => {
-                mobileHamburguerMenu.classList.add("hidden")
-                mobileHamburguerMenu.classList.remove("show")
-            }, 200)
         }
     }, 100)
 })

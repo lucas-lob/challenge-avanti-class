@@ -1,14 +1,12 @@
 @import url(colors.css);
 
 header div.hamburguer-menu {
-    background-color: #FFF;
-    opacity: 1;
     position: absolute;
+    left: 0;
+    transform: translateX(-100%);
     z-index: 1;
-    max-width: 100%;
     max-height: 329px;
-    margin: 0 16px;
-    transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.4s;
 }
 
 header div.hamburguer-menu ul {
@@ -69,20 +67,8 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
     background-color: var(--hamburguerMenuScrollbarHoverColor);
 }
 
-.hidden {
-    display: none;
-}
-
-.show {
-    display: flex;
-}
-
-.fullsize {
-    height: 329px;
-}
-
-.nosize {
-    height: 1px;
+.displayed-hamburguer-menu {
+    transform: translateX(0) !important;
 }
 
 
