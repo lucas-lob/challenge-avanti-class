@@ -9,6 +9,11 @@ header div.mobile button.mobile-hamburguer-menu-show-button {
 
 header div.mobile button.mobile-hamburguer-menu-show-button span {
     font-size: 2.3rem;
+    transition: all ease-in-out 0.25s;
+}
+
+header div.mobile button.mobile-hamburguer-menu-show-button span:active {
+    color: var(--primaryColor);
 }
 
 header div.hamburguer-menu-container {
@@ -32,6 +37,11 @@ header div.hamburguer-menu-container button.hamburguer-menu-close-button {
     width: 100%;
     padding: 10px 10px 5px;
     text-align: end;
+    transition: all ease-in-out 0.25s;
+}
+
+header div.mobile button.hamburguer-menu-close-button span:active {
+    color: var(--primaryColor);
 }
 
 header div.hamburguer-menu ul {
