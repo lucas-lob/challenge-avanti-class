@@ -142,10 +142,10 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
         left: 50%;
         transform: translateX(-50%);
         z-index: 0;
-        max-width: auto;
         max-height: 329px;
         margin: 0;
         transition: opacity ease-in-out 0.3s;
+        padding-bottom: 0;
     }
 
     header div.hamburguer-menu ul {
@@ -161,10 +161,12 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
     }
 
     header nav.hamburguer-menu-departments {
+        width: 100%;
+        max-width: 234px;
         overflow: auto;
         max-height: 329px;
         background-color: var(--gray4);
-        padding: 20px 16px 11px;
+        padding: 20px 0px 11px 16px;
     }
 
     header nav.hamburguer-menu-departments::-webkit-scrollbar {
@@ -192,9 +194,9 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
     }
 
     header nav.hamburguer-menu-categories {
+        width: 100%;
         padding: 0px;
         background-color: #FFF;
-        width: 100%;
     }
 
     header nav.hamburguer-menu-categories div.items {

@@ -139,7 +139,7 @@ const departmentsData = {
 // Global variables
 const hamburguerMenu = document.querySelector("header div.desktop div#hamburguer-menu")
 const menuHamburguerArea = document.querySelector("header div.desktop div#hamburguer-menu-area")
-const hamburguerMenuDepartments = document.querySelector("header div.desktop nav#hamburguer-menu-departments")
+const hamburguerMenuDepartments = document.querySelector("header div.desktop nav.hamburguer-menu-departments")
 const hamburguerMenuCategoriesTitle = document.querySelector("header div.desktop h4#hamburguer-menu-categories-title")
 const hamburguerMenuCategories = document.querySelector("header div.desktop nav#hamburguer-menu-categories")
 let timeoutCloseID = 0
