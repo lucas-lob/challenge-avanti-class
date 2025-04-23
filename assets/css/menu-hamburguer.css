@@ -149,6 +149,7 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
     }
 
     header div.hamburguer-menu ul {
+        width: 100%;
         gap: 12px;
     }
 
@@ -162,7 +163,7 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
 
     header nav.hamburguer-menu-departments {
         width: 100%;
-        max-width: 234px;
+        max-width: clamp(177px, 12.18vw, 234px);
         overflow: auto;
         max-height: 329px;
         background-color: var(--gray4);
@@ -190,7 +191,7 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
     }
 
     header nav.hamburguer-menu-departments li {
-        gap: 92px;
+        justify-content: space-between;
     }
 
     header nav.hamburguer-menu-categories {
@@ -200,7 +201,7 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
     }
 
     header nav.hamburguer-menu-categories div.items {
-        padding: 16px 0px 0px 34px;
+        padding: clamp(10px, 0.83vw, 16px) 0px 0px clamp(17px, 1.77vw, 34px);
     }
 
     header nav.hamburguer-menu-categories ul {
@@ -210,13 +211,14 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
 
     header nav.hamburguer-menu-categories h4 {
         font-weight: bold;
-        font-size: 16px;
-        margin-bottom: 17px;
+        font-size: 1rem;
+        margin-bottom: min(0.88vw, 17px);
     }
 
     header nav.hamburguer-menu-categories li {
-        margin-right: 127px;
+        margin-right: min(6.61vw, 127px);
         transition: all ease-in-out 0.26s;
+        padding: 0;
     }
 
     header nav.hamburguer-menu-categories li:hover {
@@ -225,19 +227,19 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
     }
 
     header nav.hamburguer-menu-categories div.hamburguer-menu-info {
-        margin: 20px 24px 11px 0;
+        margin: min(1vw, 20px) min(1.25vw, 24px) min(0.57vw, 11px) 0;
     }
 
-    header nav.hamburguer-menu-categories div.hamburguer-menu-info>div:first-child {
+    header nav.hamburguer-menu-categories div.hamburguer-menu-info > div:first-child {
         position: absolute;
         z-index: 1;
-        margin: 43px 0px 0px 27px;
+        margin: clamp(30px, 2.24vw, 43px) 0px 0px clamp(14px, 1.40vw, 27px);
     }
 
     header nav.hamburguer-menu-categories div.hamburguer-menu-info p {
-        font-size: 24px;
+        font-size: 1.50rem;
+        line-height: 1.69rem;
         color: #FFF;
-        line-height: 27px;
     }
 
     header nav.hamburguer-menu-categories div.hamburguer-menu-info a {
@@ -255,6 +257,7 @@ header nav.hamburguer-menu-categories::-webkit-scrollbar-thumb:hover {
 
     header nav.hamburguer-menu-categories div.hamburguer-menu-info a:hover {
         background-color: var(--secundaryColor);
+        color: #FFF !important;
     }
 
     header nav.hamburguer-menu-categories div.hamburguer-menu-info p:nth-child(n + 3) {
