@@ -23,6 +23,7 @@
 .anouncemment-slide {
     position: absolute;
     display: flex;
+    justify-content: center;
     scroll-snap-align: center;
 }
 

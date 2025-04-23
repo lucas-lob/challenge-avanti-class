@@ -73,9 +73,14 @@ header div.top-bar-input {
     align-items: center;
 }
 
+header div.top-bar-input div.top-search-bar-container {
+    position: relative;
+}
+
 header div.top-bar-input button {
     position: absolute;
     right: 16.3px;
+    top: 20%;
     background-color: #FFF;
     border: none;
     transition: all ease-in-out 0.25s;
@@ -584,7 +589,7 @@ footer p.footer-text::after {
 }
 
 .top-bar-horizontal-gap {
-    gap: 78px;
+    gap: 21.66vw;
 }
 
 .top-bar-vertical-gap {
@@ -821,7 +826,7 @@ footer p.footer-text::after {
     main div.anouncemment-img {
         height: 100%;
         position: absolute;
-        left: -1.3vw;
+        left: 10.4vw;
     }
 
     main img.anouncemment-img {
@@ -833,7 +838,7 @@ footer p.footer-text::after {
 
     main div.anouncemment-text {
         gap: 10px;
-        margin-right: 3.6vw;
+        margin-right: 17.6vw;
     }
 
     main div.supersale {
@@ -1215,5 +1220,27 @@ footer p.footer-text::after {
     }
 
 
+
+}
+
+@media (min-width:960px){
+    main div.anouncemment-img {
+        left: 4.4vw;
+    }
+
+    main div.anouncemment-text {
+        margin-right: 7.6vw;
+    }
+
+}
+
+@media (min-width:1360px){
+    main div.anouncemment-img {
+        left: -1.3vw;
+    }
+
+    main div.anouncemment-text {
+        margin-right: 3.6vw;
+    }
 
 }
