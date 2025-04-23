@@ -6,6 +6,9 @@ header div.hamburguer-menu {
     transform: translateX(-100%);
     z-index: 1;
     max-height: 329px;
+    background-color: #FFF;
+    border-radius: 0 20px 20px 0;
+    padding: 20px 0;
     transition: all ease-in-out 0.4s;
 }
 
@@ -14,9 +17,8 @@ header div.hamburguer-menu ul {
 }
 
 header nav.hamburguer-menu-departments {
-    padding: 15px;
+    padding: 0 20px;
     overflow: auto;
-    background-color: var(--gray4);
     scroll-snap-type: y mandatory;
 }
 
@@ -40,26 +42,19 @@ header nav.hamburguer-menu-departments::-webkit-scrollbar-thumb:hover {
 }
 
 header nav.hamburguer-menu-departments li {
-    scroll-snap-align: end;
+    scroll-snap-align: center;
     gap: 30px;
 }
 
 header nav.hamburguer-menu-categories {
-    padding: 15px;
-    background-color: #FFF;
-    overflow: auto;
-    scroll-snap-type: y mandatory;
-}
-
-header nav.hamburguer-menu-categories {
-    padding: 15px;
     background-color: #FFF;
     overflow: auto;
     scroll-snap-type: y mandatory;
 }
 
 header nav.hamburguer-menu-categories li {
-    scroll-snap-align: end;
+    padding: 0 20px;
+    scroll-snap-align: center;
 }
 
 header nav.hamburguer-menu-categories::-webkit-scrollbar {
