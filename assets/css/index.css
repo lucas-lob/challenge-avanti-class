@@ -287,7 +287,7 @@ main div.banner h2 {
 
 main div.banner p {
     font-family: Nunito, sans-serif;
-    font-size: clamp(14px, 1.28vw, 18px);
+    font-size: 0.875rem;
 }
 
 main div.extended-banner h2 {
@@ -957,13 +957,14 @@ footer p.footer-text::after {
     }
 
     main div.banner h2 {
-        margin-bottom: 22px;
+        margin-bottom: min(1.12vw, 22px);
         font-weight: bold;
         font-family: Nunito, sans-serif;
     }
 
     main div.banner p {
         font-family: Nunito, sans-serif;
+        font-size: 0.75rem;
     }
 
     main div.extended-banner div.small-container {
@@ -1153,11 +1154,11 @@ footer p.footer-text::after {
     }
 
     .banner-text-width {
-        width: 50%;
+        width: 70%;
     }
 
     .banner-image-padding {
-        padding: 0;
+        padding: clamp(65px, 5.6vw, 109px) min(35px, 3.3vw, 64px);
     }
 
 
@@ -1232,8 +1233,8 @@ footer p.footer-text::after {
         margin-right: 11.6vw;
     }
 
-    .banner-image-padding {
-        padding: min(5.6vw, 109px) min(3.3vw, 64px);
+    main div.banner p {
+        font-size: 0.875rem;
     }
 
 }
@@ -1247,7 +1248,11 @@ footer p.footer-text::after {
         margin-right: 3.6vw;
     }
 
+    main div.banner p {
+        font-size: clamp(1rem, 0.94vw, 1.125rem);
+    }
+
     .banner-text-width {
-        width: 25.36vw;
+        width: 41.37%;
     }
 }
