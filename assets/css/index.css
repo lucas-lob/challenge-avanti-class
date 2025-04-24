@@ -309,7 +309,7 @@ main div.extended-banner p {
     font-family: Nunito, sans-serif;
     color: #000;
     letter-spacing: 0.5px;
-    font-size: clamp(12px, 1.28vw, 18px);
+    font-size: 0.75rem;
     width: 276px;
 }
 
@@ -983,11 +983,12 @@ footer p.footer-text::after {
         font-family: Nunito, sans-serif;
         color: var(--onBannerColor);
         letter-spacing: 1px;
-        width: 360px;
+        width: 200px;
+        font-size: 0.625rem;
     }
 
     main div.extended-banner div.icon {
-        width: auto;
+        width: clamp(50px, 4.68vw, 90px);
     }
 
     main div.contact div {
@@ -1145,10 +1146,6 @@ footer p.footer-text::after {
         gap: 2.60vw;
     }
 
-    .extended-banner-text-width {
-        width: 476px;
-    }
-
     .banner-vertical-gap {
         gap: 1.14vw;
     }
@@ -1237,6 +1234,10 @@ footer p.footer-text::after {
         font-size: 0.875rem;
     }
 
+    main div.extended-banner p {
+        width: clamp(260px, 18.75vw, 360px);
+        font-size: 0.75rem;
+    }
 }
 
 @media (min-width:1360px){
@@ -1250,6 +1251,10 @@ footer p.footer-text::after {
 
     main div.banner p {
         font-size: clamp(1rem, 0.94vw, 1.125rem);
+    }
+
+    main div.extended-banner p {
+        font-size: clamp(0.875rem, 0.94vw, 1.125rem);
     }
 
     .banner-text-width {
