@@ -886,9 +886,9 @@ footer p.footer-text::after {
         position: absolute;
         display: flex;
         justify-content: space-between;
-        width: 102%;
+        left: max(-1vw, -19.2px);
+        width: 102.75%;
         bottom: 50%;
-        transform: translateX(-10px);
         z-index: 1;
     }
 
