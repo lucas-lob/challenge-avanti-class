@@ -949,7 +949,7 @@ footer p.footer-text::after {
     main div.banner {
         flex-direction: row;
         margin: auto;
-        gap: 1.95vw;
+        gap: min(1.95vw, 37.5px);
     }
 
     main div.banner div:last-child {
@@ -970,7 +970,7 @@ footer p.footer-text::after {
     main div.extended-banner div.small-container {
         flex-direction: row;
         padding: 0px;
-        gap: 2.55vw;
+        gap: min(2.55vw, 49px);
     }
 
     main div.extended-banner h2 {
@@ -992,7 +992,7 @@ footer p.footer-text::after {
     }
 
     main div.contact div {
-        height: 20%;
+        height: min(20%, 134px);
     }
 
     main div.contact img {
@@ -1143,7 +1143,7 @@ footer p.footer-text::after {
     }
 
     .extended-banner-vertical-gap {
-        gap: 2.60vw;
+        gap: min(2.60vw, 50px);
     }
 
     .banner-vertical-gap {
@@ -1172,11 +1172,11 @@ footer p.footer-text::after {
     }
 
     .newletter-form-padding {
-        padding: 3.33vw 0;
+        padding: min(3.33vw, 64px) 0;
     }
 
     .newletter-form-input-text {
-        width: 14.58vw;
+        width: min(14.58vw, 280px);
         height: 48px;
         border: 1px solid var(--gray2);
         border-radius: 8px;
@@ -1188,7 +1188,7 @@ footer p.footer-text::after {
     .newletter-form-input-submit {
         width: 121px;
         height: 48px;
-        padding: 0.7vw;
+        padding: min(0.7vw, 14px);
         background-color: var(--primaryColor);
         color: #FFF;
         border: 0px solid var(--primaryColor);
@@ -1255,9 +1255,5 @@ footer p.footer-text::after {
 
     main div.extended-banner p {
         font-size: clamp(0.875rem, 0.94vw, 1.125rem);
-    }
-
-    .banner-text-width {
-        width: 41.37%;
     }
 }
