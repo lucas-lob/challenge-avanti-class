@@ -1256,4 +1256,8 @@ footer p.footer-text::after {
     main div.extended-banner p {
         font-size: clamp(0.875rem, 0.94vw, 1.125rem);
     }
+
+    .banner-text-width {
+        width: 41.5%;
+    }
 }
