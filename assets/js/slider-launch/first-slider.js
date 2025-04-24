@@ -11,7 +11,7 @@
     function updateBottomButtons(version) {
         let delay = 0
         if (version === "touch") {
-            delay = 500
+            delay = 600
         } else {
             delay = 300
         }
