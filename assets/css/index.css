@@ -278,7 +278,7 @@ main div.banner {
     gap: 22px;
 }
 
-main div.banner div:last-child {
+main div.banner > div:last-child {
     padding: 0 24px;
 }
 
@@ -292,6 +292,7 @@ main div.banner h2 {
 main div.banner p {
     font-family: Nunito, sans-serif;
     font-size: 0.875rem;
+    letter-spacing: 0.8px;
 }
 
 main div.extended-banner h2 {
@@ -648,6 +649,10 @@ footer p.footer-text::after {
 
 .extended-banner-item-horizontal-gap {
     gap: 14px;
+}
+
+.banner-vertical-gap {
+    gap: 22px;
 }
 
 
@@ -1241,6 +1246,10 @@ footer p.footer-text::after {
     main div.extended-banner p {
         width: clamp(260px, 18.75vw, 360px);
         font-size: 0.75rem;
+    }
+
+    .banner-text-width {
+        width: 100%;
     }
 }
 
