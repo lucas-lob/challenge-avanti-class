@@ -129,6 +129,10 @@ header span.descount-price {
     padding: 0 5px;
 }
 
+header div.profile img {
+    max-width: 20px;
+}
+
 header div.shopping-car {
     position: relative;
 }
@@ -149,6 +153,10 @@ header div.shopping-car a p {
     border-radius: 50%;
     background-color: var(--primaryColor);
     color: #FFF;
+}
+
+header div.shopping-car img {
+    max-width: 25px;
 }
 
 main div.anouncemment {
