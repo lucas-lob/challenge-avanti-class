@@ -2,13 +2,21 @@
 
 ![Header](assets/images/readme-title.png)
 
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+Acesse o site desenvolvido em: https://lucas-lob.github.io/challenge-avanti-class/index.html
+
 </div>
 
 </br>
 
 </br>
 
-# Sobre o projeto
+# ℹ️ Sobre o projeto
 
 ### Descrição
 
@@ -16,24 +24,11 @@ Esse projeto consistiu na resolução de um um desafio técnico da <a href="http
 
 Visando uma maior fixação dos recursos aprendidos durante este projeto, não foram utilizados quaisquer ferramentas para a criação de componentes do site, destacando-se os elementos *carrossel*, *slider* e *menu hamburguer*, que tiveram suas estruturas e lógicas criadas totalmente do zero utilizando apenas *HTML*, *CSS* e *JavaScript*. Além disso, pelo mesmo motivo, também não foram utilizadas bilbiotecas de *front-end* para a auxiliar na criação da responsividade do site.
 
-
-### Linguagens utilizadas
-
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
-
-### Ferramentas utilizadas
-
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-
 </br>
 
 </br>
 
-# Instalação
+# 💻 Instalação
 
 O projeto não possui *frameworks*, tornando-o bem simples para instalação, sendo necessário apenas ter o *git* instalado em sua máquina.
 
@@ -53,7 +48,7 @@ git clone https://github.com/lucas-lob/challenge-avanti-class.git
 
 </br>
 
-# Principais recursos desenvolvidos
+# ✨ Principais recursos desenvolvidos
 
 ### Carrossel
 
@@ -88,11 +83,10 @@ git clone https://github.com/lucas-lob/challenge-avanti-class.git
 
 </br>
 
-# Contatos
+# 📧 Contatos
 
-Contate-me através dos *links* abaixo!
-
-<a href="https://www.linkedin.com/in/lucas-lobato-chagas-036159201/">![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)</a>
+Linkedin: https://www.linkedin.com/in/lucas-lobato-chagas-036159201/
 
 E-mail: lucas.mcp23@gmail.com
 
+#### Feito com ❤️ por Lucas Lobato.
